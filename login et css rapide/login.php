@@ -35,13 +35,15 @@
         die("<p>connexion impossible</p>");
     }
 
+    if(isset($_POST['Username']) && isset($_POST['POST'])){
     $Pseudo = mysqli_real_escape_string($link, $_POST['Username']);
     $MDP = mysqli_real_escape_string($link, $_POST['Password']);
+    }
 
 ?>
 
 <?php
-	$resultat = mysqli_query($link,"SELECT pseudo, mdp FROM login WHERE pseudo = '".$Pseudo."'");
+	$resultat = mysqli_query($link,"SELECT pseudo, mdp FROM login WHERE pseudo = '.$Pseudo.'");
 
 	// Comparaison du pass envoyé via le formulaire avec la base
 	//$isPasswordCorrect = password_verify($_POST['Password'], $resultat['mdp']);
