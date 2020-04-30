@@ -36,8 +36,8 @@
     }
 
     if(isset($_POST['Username']) && isset($_POST['POST'])){
-    $Pseudo = mysqli_real_escape_string($link, $_POST['Username']);
-    $MDP = mysqli_real_escape_string($link, $_POST['Password']);
+   	 $Pseudo = mysqli_real_escape_string($link, $_POST['Username']);
+   	 $MDP = mysqli_real_escape_string($link, $_POST['Password']);
     }
 
 ?>
