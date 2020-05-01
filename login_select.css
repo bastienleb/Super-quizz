@@ -1,0 +1,45 @@
+body  {
+  background-image: url("font.png");
+  background-repeat: no-repeat;
+  width: 1045px;
+  height: 757px;
+}
+
+input{
+	border-radius:0.5em;
+	cursor: default;
+	padding: 3px;
+	border:none;
+	width: 70%;
+	border-width: 1px;
+    border-style: solid;
+    border-color: rgb(169, 169, 169)
+}
+
+button{
+	background-color: white;
+	border-radius: 0.5em;
+	padding: 3px;
+}
+
+button:hover{
+	opacity: 0.8;
+	cursor:pointer;
+}
+
+select{
+	padding: 3px;
+	border-radius: 0.5em;
+	width: 70%;	
+}
+
+
+.all{
+	position: absolute;
+	top: 42.5%;
+	left:42.5%;
+	padding: 1em;
+	border-radius: 1em;
+	background: linear-gradient(to bottom right, white, grey);
+	text-align: center;
+}
