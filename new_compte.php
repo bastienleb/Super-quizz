@@ -50,16 +50,8 @@
 				mysqli_execute($stmt);
 
 				header('Location: https://dwarves.iut-fbleau.fr/~leblet/WIM/PROJET/login.php');
-
-
-
-
 			}
 		}
-
-
-
 	?>
-
 </body>
 </html>
