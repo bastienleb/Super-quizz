@@ -75,24 +75,24 @@
 	    <link rel="stylesheet" href="login.css">
 	</head>
 	<body>
-	<div class="all">
-		<form method = "post"action="login.php">
-		<label>Username: </label>	
-		<input type="text" name="Username" required>
+		<div class="all">
+			<form method = "post"action="login.php">
+				<label>Username: </label>	
+				<input type="text" name="Username" required>
 		
-		</br>
-		</br>	
+				</br>
+				</br>	
 		
-		<label>Password: </label>
-		<input type="password" name="Password" required>
+				<label>Password: </label>
+				<input type="password" name="Password" required>
 
-		</br>
-		</br>
+				</br>
+				</br>
 
-		<button onclick="temporaire()">se connecter</button>
-		</form>
-
-	</div>
+				<button onclick="temporaire()">se connecter</button>
+			</form>
+			<a href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/new_compte.php">Créer un compte</a>
+		</div>
 		
 	</body>
 </html>
