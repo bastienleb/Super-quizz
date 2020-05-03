@@ -31,9 +31,9 @@
 			$mdp = mysqli_real_escape_string($link, $_POST['mdp']);
 			$confirmation = mysqli_real_escape_string($link, $_POST['confirmation']);
 
-			$search = mysqli_query($link,"SELECT '$Username' FROM login");
-
-			if($search)
+			$search = mysqli_query($link,"SELECT COUNT(*) AS existe_pseudo FROM login WHERE pseudo = '".$Username."'");
+			$data = mysqli_fetch_assoc($search);
+			if(($data['existe_pseudo'] != '0'))
 				echo "Erreur: Pseudo déjà utilisé !";
 			else if($confirmation != $mdp){
 				echo "Erreur: les deux mots de passes entrés sont différents !";
