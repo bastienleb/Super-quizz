@@ -3,6 +3,7 @@
 <head>
 	<title>Création de Compte</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="new_compte.css">
 </head>
 <body>
 	<?php
@@ -11,19 +12,21 @@
 			die("<p>connexion impossible</p>");
 		}
 	?>
-
+	<div class="all">
 	<form method="POST">
-		<p>Pseudo : </p><br/>
-		<input type="text" name="Username" required>
+		<b><label>Pseudo : </label></b><br/>
+		<b><input type="text" name="Username" required></b>
 		<br/><br/>
-		<p>Mot de passe : </p><br/>
+		<b><label>Mot de passe : </label></b><br/>
 		<input type="password" name="mdp" required>
 		<br/><br/>
-		<p>Confirmer le mot de passe : </p><br/>
+		<b><label>Confirmer le mot de passe : </label></b><br/>
 		<input type="password" name="confirmation" required>
 		<br/><br/>
-		<input type="submit" name="nouveau_compte">
+		<!--<input type="submit" name="nouveau_compte" class="envoie">-->
+		<button name"nouveau_compte"><b>Envoyer</b></button>
 	</form>
+	</div>
 	
 	<?php
 		if(isset($_POST['Username']) && isset($_POST['mdp']) && isset($_POST['confirmation'])){
@@ -31,9 +34,9 @@
 			$mdp = mysqli_real_escape_string($link, $_POST['mdp']);
 			$confirmation = mysqli_real_escape_string($link, $_POST['confirmation']);
 
-			$search = mysqli_query($link,"SELECT COUNT(*) AS existe_pseudo FROM login WHERE pseudo = '".$Username."'");
-			$data = mysqli_fetch_assoc($search);
-			if(($data['existe_pseudo'] != '0'))
+			$search = mysqli_query($link,"SELECT '$Username' FROM login");
+
+			if($search)
 				echo "Erreur: Pseudo déjà utilisé !";
 			else if($confirmation != $mdp){
 				echo "Erreur: les deux mots de passes entrés sont différents !";
