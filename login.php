@@ -11,6 +11,10 @@
     	$Pseudo = mysqli_real_escape_string($link, $_POST['Username']);
     	$MDP = mysqli_real_escape_string($link, $_POST['Password']);
 	}
+	else
+		$Pseudo = "default";
+
+	
 
 	$resultat = mysqli_query($link,"SELECT pseudo, mdp FROM login WHERE pseudo = '".$Pseudo."'");
 
@@ -38,21 +42,21 @@
 				<?php
 			}
 			else if($article->mdp!= $MDP){
-				//echo "Pseudo ou mot de passe incorrect";
+				//echo "mot de passe incorrect";
 				?>
 		   		<script>
 				function temporaire() {
-				  alert("Pseudo ou mot de passe incorrect");
+				  alert("mot de passe incorrect");
 				}
 				</script>
 				<?php
 			}
 			else if($article->pseudo!= $Pseudo){
-				//echo "Pseudo ou mot de passe incorrect";
+				//echo "Pseudo incorrect";
 				?>
 		   		<script>
 				function temporaire() {
-				  alert("Pseudo ou mot de passe incorrect");
+				  alert("Pseudo incorrect");
 				}
 				</script>
 				<?php
@@ -75,24 +79,24 @@
 	    <link rel="stylesheet" href="login.css">
 	</head>
 	<body>
-		<div class="all">
-			<form method = "post"action="login.php">
-				<label>Username: </label>	
-				<input type="text" name="Username" required>
+	<div class="all">
+		<form method = "post"action="login.php">
+		<label>Username: </label><br/>
+		<input type="text" name="Username" required>
 		
-				</br>
-				</br>	
+		</br>
+		</br>	
 		
-				<label>Password: </label>
-				<input type="password" name="Password" required>
+		<label>Password: </label><br/>
+		<input type="password" name="Password" required>
 
-				</br>
-				</br>
+		</br>
+		</br>
 
-				<button onclick="temporaire()">se connecter</button>
-			</form>
-			<a href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/new_compte.php">Créer un compte</a>
-		</div>
+		<button onclick="temporaire()">se connecter</button>
+		</form>
+
+	</div>
 		
 	</body>
 </html>

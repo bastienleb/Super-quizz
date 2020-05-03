@@ -1,9 +1,18 @@
 body  {
-  background-image: url("font.png");
-  background-repeat: no-repeat;
-  width: 1045px;
-  height: 757px;
+    background-image: url("font.png");
+    background-repeat: no-repeat;
+    width: 1045px;
+    height: 757px;
 }
+
+form{
+    background-color: chartreuse;
+    background: linear-gradient(to top left, white, grey);
+    border-radius: 1em;
+	padding: 1em;
+	margin: 0em;;
+}
+
 
 input{
 	border-radius:0.5em;
@@ -21,14 +30,15 @@ button:hover{
 	cursor:pointer;
 }
 
-
 .all{
 	position: absolute;
-	top: 42.5%;
-	left:42.5%;
-	padding: 1em;
+	top: 30%;
+    left:25%;
+    padding: 15px;
 	border-radius: 1em;
-	background: linear-gradient(to bottom right, white, grey);
-	text-align: center;
+    /*background: linear-gradient(to bottom right, white, grey);*/
+    color: white;
+    background-color: black;
+    text-align: center;
+    width: 50%; 
 }
-
