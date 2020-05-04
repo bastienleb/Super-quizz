@@ -79,6 +79,9 @@
 	    <link rel="stylesheet" href="login.css">
 	</head>
 	<body>
+	<div class="picture">
+		<img src='quizz_img.jpg'>
+	</div>
 	<div class="all">
 		<form method = "post"action="login.php">
 		<label>Username: </label><br/>
@@ -95,6 +98,7 @@
 
 		<button onclick="temporaire()">se connecter</button>
 		</form>
+		<a href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/new_compte.php">Crée un compte</a>
 
 	</div>
 		
