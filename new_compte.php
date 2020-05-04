@@ -12,6 +12,10 @@
 			die("<p>connexion impossible</p>");
 		}
 	?>
+	<div class="picture">
+		<img src='quizz_img.jpg'>
+	</div>
+	
 	<div class="all">
 	<form method="POST">
 		<b><label>Pseudo : </label></b><br/>
@@ -23,7 +27,6 @@
 		<b><label>Confirmer le mot de passe : </label></b><br/>
 		<input type="password" name="confirmation" required>
 		<br/><br/>
-		<!--<input type="submit" name="nouveau_compte" class="envoie">-->
 		<button name"nouveau_compte"><b>Envoyer</b></button>
 	</form>
 	</div>
