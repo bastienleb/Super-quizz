@@ -27,7 +27,7 @@
 		<b><label>Confirmer le mot de passe : </label></b><br/>
 		<input type="password" name="confirmation" required>
 		<br/><br/>
-		<button name"nouveau_compte"><b>Envoyer</b></button>
+		<button name="nouveau_compte"><b>Envoyer</b></button>
 	</form>
 	</div>
 	
@@ -37,9 +37,10 @@
 			$mdp = mysqli_real_escape_string($link, $_POST['mdp']);
 			$confirmation = mysqli_real_escape_string($link, $_POST['confirmation']);
 
-			$search = mysqli_query($link,"SELECT '$Username' FROM login");
+			$search = mysqli_query($link,"SELECT COUNT(*) AS existe_pseudo FROM login WHERE pseudo = '".$Username."'");
+			$data = mysqli_fetch_assoc($search);
 
-			if($search)
+			if(($data['existe_pseudo'] != '0'))
 				echo "Erreur: Pseudo déjà utilisé !";
 			else if($confirmation != $mdp){
 				echo "Erreur: les deux mots de passes entrés sont différents !";
