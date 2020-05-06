@@ -13,6 +13,7 @@
 	}
 	else
 		$Pseudo = "default";
+		$MDP = "mdp";
 
 	
 
@@ -26,12 +27,28 @@
  ?>
 	    <table>
 	    <?php
-	    
+		
 	    	
 		while($article=mysqli_fetch_object($resultat)) {
+			
+			
+			echo "le mot de passe est valide ou pas ? <br/>";
+			$test=password_verify($MDP, $article->mdp);
 
-	      	echo "<td>";
-	      	if (($article->mdp == $MDP) && ($article->pseudo == $Pseudo)) {
+			// Comparaison du pass envoyé via le formulaire avec la base
+			if ($test)
+				echo "le mot de passe est bon";
+			else 
+				echo "le mot de passe est pas bon";
+
+			  //echo "<td>";
+			echo "<tr>";
+			echo "<td>".$article->pseudo."</td>";
+            echo "<td>".$article->mdp."</td>";
+			echo "</tr>";
+			?>
+			<?php
+	      	/*if (($article->mdp == $MDP) && ($article->pseudo == $Pseudo)) {
 		   		//echo "C BO";
 		   		?>
 		   		<script>
@@ -58,15 +75,14 @@
 				function temporaire() {
 				  alert("Pseudo incorrect");
 				}
-				</script>
+				</script>*/
+				?>
 				<?php
 		}
-		echo "</td>";
+		//echo "</td>";
     }
 
    	echo "</table>";
-
- }
 
 
 	mysqli_close($link);	
