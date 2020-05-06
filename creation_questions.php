@@ -33,14 +33,14 @@
     		<br/>
     		<input type="text" name="reponse_1_a" placeholder="Reponse A:" required>
     		<input type="radio" name="reponse1">
-    		<br/>
     		<input type="text" name="reponse_1_b" placeholder="Reponse B:" required>
     		<input type="radio" name="reponse1">
+    		<br/>
     		<input type="text" name="reponse_1_c" placeholder="Reponse C:" required>
     		<input type="radio" name="reponse1">
-    		<br/>
     		<input type="text" name="reponse_1_d" placeholder="Reponse D:" required>
     		<input type="radio" name="reponse1">
+    		<br/>
     	</div>
 
     	<div class="question2">
@@ -48,14 +48,14 @@
 	    	<br/>
 	    	<input type="text" name="reponse_2_a" placeholder="Reponse A:" required>
 	    	<input type="radio" name="reponse2">
-	    	<br/>
 	    	<input type="text" name="reponse_2_b" placeholder="Reponse B:" required>
 	    	<input type="radio" name="reponse2">
+	    	<br/>
 	    	<input type="text" name="reponse_2_c" placeholder="Reponse C:" required>
 	    	<input type="radio" name="reponse2">
-	    	<br/>
 	    	<input type="text" name="reponse_2_d" placeholder="Reponse D:" required>
 	    	<input type="radio" name="reponse2">
+	    	<br/>
 		</div>
 
     	<div class="question3">
@@ -63,14 +63,14 @@
     		<br/>
     		<input type="text" name="reponse_3_a" placeholder="Reponse A:" required>
     		<input type="radio" name="reponse3">
-    		<br/>
     		<input type="text" name="reponse_3_b" placeholder="Reponse B:" required>
     		<input type="radio" name="reponse3">
+    		<br/>
     		<input type="text" name="reponse_3_c" placeholder="Reponse C:" required>
     		<input type="radio" name="reponse3">
-    		<br/>
     		<input type="text" name="reponse_3_d" placeholder="Reponse D:" required>
     		<input type="radio" name="reponse3">
+    		<br/>
     	</div>
 
     	<div class="question4">
@@ -78,14 +78,14 @@
     		<br/>
     		<input type="text" name="reponse_4_a" placeholder="Reponse A:" required>
     		<input type="radio" name="reponse4">
-    		<br/>
     		<input type="text" name="reponse_4_b" placeholder="Reponse B:" required>
     		<input type="radio" name="reponse4">
+    		<br/>
     		<input type="text" name="reponse_4_c" placeholder="Reponse C:" required>
     		<input type="radio" name="reponse4">
-    		<br/>
     		<input type="text" name="reponse_4_d" placeholder="Reponse D:" required>
     		<input type="radio" name="reponse4">
+    		<br/>
     	</div>
 
     	<div class="question5">
@@ -93,14 +93,14 @@
     		<br/>
     		<input type="text" name="reponse_5_a" placeholder="Reponse A:" required>
     		<input type="radio" name="reponse5">
-    		<br/>
     		<input type="text" name="reponse_5_b" placeholder="Reponse B:" required>
     		<input type="radio" name="reponse5">
+    		<br/>
     		<input type="text" name="reponse_5_c" placeholder="Reponse C:" required>
     		<input type="radio" name="reponse5">
-    		<br/>
     		<input type="text" name="reponse_5_d" placeholder="Reponse D:" required>
     		<input type="radio" name="reponse5">
+    		<br/>
     	</div>
 
     	<div class="question6">
@@ -108,14 +108,14 @@
     		<br/>
     		<input type="text" name="reponse_6_a" placeholder="Reponse A:" required>
     		<input type="radio" name="reponse6">
-    		<br/>
     		<input type="text" name="reponse_6_b" placeholder="Reponse B:" required>
     		<input type="radio" name="reponse6">
+    		<br/>
     		<input type="text" name="reponse_6_c" placeholder="Reponse C:" required>
     		<input type="radio" name="reponse6">
-    		<br/>
     		<input type="text" name="reponse_6_d" placeholder="Reponse D:" required>
     		<input type="radio" name="reponse6">
+    		<br/>
     	</div>
 
     	<div class="question7">
@@ -123,14 +123,14 @@
     		<br/>
     		<input type="text" name="reponse_7_a" placeholder="Reponse A:" required>
     		<input type="radio" name="reponse7">
-    		<br/>
     		<input type="text" name="reponse_7_b" placeholder="Reponse B:" required>
     		<input type="radio" name="reponse7">
+    		<br/>
     		<input type="text" name="reponse_7_c" placeholder="Reponse C:" required>
     		<input type="radio" name="reponse7">
-    		<br/>
     		<input type="text" name="reponse_7_d" placeholder="Reponse D:" required>
     		<input type="radio" name="reponse7">
+    		<br/>
     	</div>
 
     	<div class="question8">
@@ -138,14 +138,14 @@
     		<br/>
     		<input type="text" name="reponse_8_a" placeholder="Reponse A:" required>
     		<input type="radio" name="reponse8">
-    		<br/>
     		<input type="text" name="reponse_8_b" placeholder="Reponse B:" required>
     		<input type="radio" name="reponse8">
+    		<br/>
     		<input type="text" name="reponse_8_c" placeholder="Reponse C:" required>
     		<input type="radio" name="reponse8">
-    		<br/>
     		<input type="text" name="reponse_8_d" placeholder="Reponse D:" required>
     		<input type="radio" name="reponse8">
+    		<br/>
     	</div>
 
     	<button type="submit" name="créer">Créer</button> 
@@ -211,10 +211,18 @@
     		$reponse_8_c = mysqli_real_escape_string($link, $_POST['reponse_8_c']);
     		$reponse_8_d = mysqli_real_escape_string($link, $_POST['reponse_8_d']);
     		$reponse8 = mysqli_real_escape_string($link, $_POST['reponse8']);
+    		
+    		$add_theme = mysqli_prepare($link,"INSERT INTO Themes (Createur,nom_theme) VALUES (?,?)");
+			mysqli_stmt_bind_param($add_theme,"ss",$user,$theme);
+			mysqli_execute($add_theme); 
+
+			$i = 1;
+			/*for($i = 1;i<8;i++){
+				$question = mysqli_prepare($link,"INSERT INTO Questions (Theme,Question,num_Question,Reponse_A,Reponse_B,Reponse_C,Reponse_D,Bonne_reponse) VALUES (?,?,?,?,?,?,?,?)");
+			mysqli_stmt_bind_param($question,"ssdsssss",$theme,$question+$i,$i,$reponse_+$i+_a,$reponse_+$i+_b,$reponse_+$i+_c,$reponse_+$i+_d,$reponse+$i);
+			mysqli_execute($question); 
+				}*/ 
     	}	
-
-
-
     ?>
 </body>
 </html>
