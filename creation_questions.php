@@ -3,6 +3,7 @@
 <head>
 	<title>Créations questions</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://dwarves.iut-fbleau.fr/~leblet/WIM/PROJET/creation_questions.css">
 </head>
 <body>
 	<?php
@@ -101,7 +102,7 @@
     		<input type="text" name="reponse_5_d" placeholder="Reponse D:" required>
     		<input type="radio" name="reponse5">
     	</div>
-    	
+
     	<div class="question6">
     		<input type="text" name="question6" placeholder="Question 6:" required>
     		<br/>
