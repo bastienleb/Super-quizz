@@ -152,7 +152,7 @@
     </form>
 
     <?php
-    	if(isset($_POST['theme']) && isset($_POST['question1']) && isset($_POST['reponse_1_a']) && isset($_POST['reponse_1_b']) && isset($_POST['reponse_1_c']) && isset($_POST['reponse_1_d']) && isset($_POST['reponse1']) && isset($_POST['question2']) && isset($_POST['reponse_2_a']) && isset($_POST['reponse_2_b']) && isset($_POST['reponse_2_c']) && isset($_POST['reponse_2_d']) && isset($_POST['reponse2']) && isset($_POST['question3']) && isset($_POST['reponse_3_a']) && isset($_POST['reponse_3_b']) && isset($_POST['reponse_3_c']) && isset($_POST['reponse_3_d']) && isset($_POST['reponse3']) && isset($_POST['question4']) && isset($_POST['reponse_4_a']) && isset($_POST['reponse_4_b']) && isset($_POST['reponse_4_c']) && isset($_POST['reponse_4_d']) && isset($_POST['reponse4']) && isset($_POST['question5']) && isset($_POST['reponse_5_a']) && isset($_POST['reponse_5_b']) && isset($_POST['reponse_5_c']) && isset($_POST['reponse_5_d']) && isset($_POST['reponse5']) && isset($_POST['question6']) && isset($_POST['reponse_6_a']) && isset($_POST['reponse_6_b']) && isset($_POST['reponse_6_c']) && isset($_POST['reponse_6_d']) && isset($_POST['reponse6']) && isset($_POST['question7']) && isset($_POST['reponse_7_a']) && isset($_POST['reponse_7_b']) && isset($_POST['reponse_7_c']) && isset($_POST['reponse_7_d']) && isset($_POST['reponse7']) && isset($_POST['question8']) && isset($_POST['reponse_8_a']) && isset($_POST['reponse_8_b']) && isset($_POST['reponse_8_c']) && isset($_POST['reponse_8_d']) && isset($_POST['reponse8'])){
+    	if(isset($_POST['theme']) && isset($_POST['question1']) && isset($_POST['reponse_1_a']) && isset($_POST['reponse_1_b']) && isset($_POST['reponse_1_c']) && isset($_POST['reponse_1_d']) && isset($_POST['reponse1'])/* && isset($_POST['question2']) && isset($_POST['reponse_2_a']) && isset($_POST['reponse_2_b']) && isset($_POST['reponse_2_c']) && isset($_POST['reponse_2_d']) && isset($_POST['reponse2']) && isset($_POST['question3']) && isset($_POST['reponse_3_a']) && isset($_POST['reponse_3_b']) && isset($_POST['reponse_3_c']) && isset($_POST['reponse_3_d']) && isset($_POST['reponse3']) && isset($_POST['question4']) && isset($_POST['reponse_4_a']) && isset($_POST['reponse_4_b']) && isset($_POST['reponse_4_c']) && isset($_POST['reponse_4_d']) && isset($_POST['reponse4']) && isset($_POST['question5']) && isset($_POST['reponse_5_a']) && isset($_POST['reponse_5_b']) && isset($_POST['reponse_5_c']) && isset($_POST['reponse_5_d']) && isset($_POST['reponse5']) && isset($_POST['question6']) && isset($_POST['reponse_6_a']) && isset($_POST['reponse_6_b']) && isset($_POST['reponse_6_c']) && isset($_POST['reponse_6_d']) && isset($_POST['reponse6']) && isset($_POST['question7']) && isset($_POST['reponse_7_a']) && isset($_POST['reponse_7_b']) && isset($_POST['reponse_7_c']) && isset($_POST['reponse_7_d']) && isset($_POST['reponse7']) && isset($_POST['question8']) && isset($_POST['reponse_8_a']) && isset($_POST['reponse_8_b']) && isset($_POST['reponse_8_c']) && isset($_POST['reponse_8_d']) && isset($_POST['reponse8'])*/){
 
     		$theme = mysqli_real_escape_string($link, $_POST['theme']);
 
@@ -163,7 +163,7 @@
     		$reponse_1_d = mysqli_real_escape_string($link, $_POST['reponse_1_d']);
     		$reponse1 = mysqli_real_escape_string($link, $_POST['reponse1']);
 
-    		$question2 = mysqli_real_escape_string($link, $_POST['question2']);
+    	/*	$question2 = mysqli_real_escape_string($link, $_POST['question2']);
     		$reponse_2_a = mysqli_real_escape_string($link, $_POST['reponse_2_a']);
     		$reponse_2_b = mysqli_real_escape_string($link, $_POST['reponse_2_b']);
     		$reponse_2_c = mysqli_real_escape_string($link, $_POST['reponse_2_c']);
@@ -214,14 +214,14 @@
     		
     		$add_theme = mysqli_prepare($link,"INSERT INTO Themes (Createur,nom_theme) VALUES (?,?)");
 			mysqli_stmt_bind_param($add_theme,"ss",$user,$theme);
-			mysqli_execute($add_theme); 
+			mysqli_execute($add_theme); */
 
 			$i = 1;
-			/*for($i = 1;i<8;i++){
-				$question = mysqli_prepare($link,"INSERT INTO Questions (Theme,Question,num_Question,Reponse_A,Reponse_B,Reponse_C,Reponse_D,Bonne_reponse) VALUES (?,?,?,?,?,?,?,?)");
-			mysqli_stmt_bind_param($question,"ssdsssss",$theme,$question+$i,$i,$reponse_+$i+_a,$reponse_+$i+_b,$reponse_+$i+_c,$reponse_+$i+_d,$reponse+$i);
-			mysqli_execute($question); 
-				}*/ 
+			//for($i = 1;i<8;i++){
+			//	$question = mysqli_prepare($link,"INSERT INTO Questions (Theme,Question,num_Question,Reponse_A,Reponse_B,Reponse_C,Reponse_D,Bonne_reponse) VALUES (?,?,?,?,?,?,?,?)");
+			//mysqli_stmt_bind_param($question,"ssdsssss",$theme,$question.$i.,$i,$reponse_.$i._a,$reponse_.$i._b,$reponse_.$i._c,$reponse_.$i._d,$reponse.$i);
+			//mysqli_execute($question); 
+			//}
     	}	
     ?>
 </body>
