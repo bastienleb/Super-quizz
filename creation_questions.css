@@ -1,11 +1,12 @@
 body{
-    background-color: teal;
+    /*background-color: teal /*mediumseagreens;*/
     margin:2em;
+    background: linear-gradient(to right, teal, mediumseagreen, teal)
 }
 
 button{
     position: fixed;
-    top:90%;
+    top:65%;
     left: 37.5%;
 	border-radius:0.5em;
     cursor: default;
@@ -18,6 +19,14 @@ button{
 button:hover{
 	opacity: 0.95;
     cursor:pointer;
+}
+
+label{
+    display: inline-block;
+    position: relative;
+    left: 37%;
+    margin-bottom: 1.5em;
+    font-size: 2em;
 }
 
 .theme{
@@ -37,6 +46,7 @@ input{
 input[type="radio" i] {
     position: relative;
     top: 0.4em;
+    width: 2.5em;
 }
 
 ::placeholder{
@@ -44,63 +54,19 @@ input[type="radio" i] {
 }
 
 .question{
-    width: 70%;
+    width: 75%;
 }
-.question1, .question2,.question3, .question4,.question5, .question6,.question7, .question8{
+
+.question1{
     display: block;
     background-color: rgb(126, 204, 204);
-    width: 50%;
+    width: 40%;
     margin: 1em;
     padding:5px;
-    width: 35%;
     text-align: center;
     border: solid 2px   ;
     border-radius: 0.5em;
-}
-.question1 {
     position: fixed;
-    top: 5em;
-    left: 5em;
-}
-
-.question2 {
-    position: fixed;
-    top: 5em;
-    right: 5em;
-}
-
-.question3 {
-    position: fixed;
-    top: 13em;
-    left: 5em;
-}
-
-.question4 {
-    position: fixed;
-    top: 13em;
-    right: 5em;
-}
-
-.question5 {
-    position: fixed;
-    top: 24em;
-    left: 5em;
-}
-
-.question6 {
-    position: fixed;
-    top: 24em;
-    right: 5em;
-}
-
-.question7 {
-    position: fixed;
-    top: 32em;
-    left: 5em;
-}
-
-.question8 {
-    position: fixed;
-    top: 32em;
-    right: 5em;
+    top: 40%;
+    left: 30%;
 }

@@ -23,7 +23,8 @@
     	if(!$link){
         	die("<p>connexion impossible</p>");
     	}
-    ?>
+	?>
+	<label><b>CRÉATION DE QUESTION</b></label>
     <form method="POST">
     	<input type="text" name="theme" placeholder="Nom du thème" class="theme" required>
     	<br/><br/>
@@ -67,6 +68,6 @@
     		mysqli_stmt_bind_param($question,"ssdsssss",$theme,$question1,$i,$reponseA,$reponseB,$reponseC,$reponseD,$reponse1);
     		mysqli_execute($question);
             } 
-    ?>
+	?>
 </body>
 </html>
