@@ -1,14 +1,17 @@
 body{
-    /*background-color: teal /*mediumseagreens;*/
     margin:2em;
-    background: linear-gradient(to right, teal, mediumseagreen, teal)
+    background: linear-gradient(to right, teal, mediumseagreen, teal);
+}
+
+label{
+    color: white;
 }
 
 button{
-    position: fixed;
+    position: absolute;
     top:65%;
     left: 37.5%;
-	border-radius:0.5em;
+	border-radius:1em;
     cursor: default;
     width: 25%;
     padding: 3px;
@@ -17,8 +20,16 @@ button{
 }
 
 button:hover{
-	opacity: 0.95;
-    cursor:pointer;
+    box-shadow: 0px 15px 25px -5px royalblue;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0px 4px 8px royalblue;
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
 }
 
 label{
@@ -39,7 +50,7 @@ label{
 
 input{
     border: solid 1.5px;
-    border-radius: 0.5em;
+    border-radius: 1em;
     height: 1.5em;
 }
 
@@ -47,26 +58,45 @@ input[type="radio" i] {
     position: relative;
     top: 0.4em;
     width: 2.5em;
+    cursor:pointer;
 }
 
 ::placeholder{
     text-align: center;
 }
 
-.question{
+.text_question{
     width: 75%;
+    margin-bottom: 2.5em;
+    position: relative;
+    left: 13.5%;
 }
 
-.question1{
+.question{
     display: block;
     background-color: rgb(126, 204, 204);
     width: 40%;
     margin: 1em;
     padding:5px;
-    text-align: center;
-    border: solid 2px   ;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    border: solid 2px;
     border-radius: 0.5em;
     position: fixed;
-    top: 40%;
+    top: 30%;
     left: 30%;
+    box-shadow: 0px 4px 8px royalblue;
+}
+
+.align_gauche {
+    margin-left: 10px;
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.align_droite {
+    position: relative;
+    left: 130px;
+    top: 0px;
+    width: 200px;
 }

@@ -29,18 +29,18 @@
     	<input type="text" name="theme" placeholder="Nom du thème" class="theme" required>
     	<br/><br/>
 
-    	<div class="question1">
-    		<input type="text" name="question1" placeholder="Question 1" class="question" required>
+    	<div class="question">
+    		<input type="text" name="question1" placeholder="Question 1" class="text_question" required>
     		<br/>
-            <input type="text" name="reponseA" placeholder="Reponse A" required>
+            <input type="text" name="reponseA" placeholder="Reponse A" class="align_gauche" required>
             <input type="radio" name="reponse1" >
-    		<input type="text" name="reponseB" placeholder="Reponse B" required>
-    		<input type="radio" name="reponse1" >
+    		<input type="text" name="reponseB" placeholder="Reponse B" class="align_droite" required>
+    		<input type="radio" name="reponse1" class="align_droite" >
     		<br/>
-            <input type="text" name="reponseC" placeholder="Reponse C" required>
+            <input type="text" name="reponseC" placeholder="Reponse C" class="align_gauche" required>
             <input type="radio" name="reponse1" >            
-    		<input type="text" name="reponseD" placeholder="Reponse D" required>
-    		<input type="radio" name="reponse1" >
+    		<input type="text" name="reponseD" placeholder="Reponse D" class="align_droite" required>
+    		<input type="radio" name="reponse1" class="align_droite" >
     	</div>
 
     	
