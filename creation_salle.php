@@ -17,7 +17,7 @@
     	} else {
         	$user = json_decode($_COOKIE['user']);
     	} */
-    	
+
 		$link=mysqli_connect("localhost","quintois","quintois","quintois");
 		if(!$link){
 			die("<p>connexion impossible</p>");
@@ -29,7 +29,7 @@
 		<input type="text" name="nombre_joueurs" placeholder="nombre de joueurs">
 		<br/>
 		<input type="text" name="nombre_questions" placeholder="nombre de questions">
-		<select name="user_name" class="selecteur">
+		<select name="nom_theme" class="selecteur">
 	    	<option value="selection" hidden="">Selectionnez</option>
 		
 			<?php
@@ -48,6 +48,17 @@
     			}
  			?>
     	</select>
-	</form>		
+    	<button type="submit" name="créer">Créer</button> 
+   	</form>
+
+   	<?php
+   		if(isset($_POST['nom']) && isset($_POST['nombre_joueurs']) && isset($_POST['nombre_questions']) && isset($_POST['nom_theme'])){
+
+   			$nom = mysqli_real_escape_string($link, $_POST['nom']);
+   			$nombre_joueurs = mysqli_real_escape_string($link, $_POST['nombre_joueurs']);
+   			$nombre_questions = mysqli_real_escape_string($link, $_POST['nombre_questions']);
+   			$nom_theme = mysqli_real_escape_string($link, $_POST['nom_theme']);
+   		}
+   	?>
 </body>
 </html>
