@@ -12,31 +12,34 @@
     <ul>
         <li style="float:left"> <h2>SUPER QUIZZ</h2></li>
         <li > <a class="nom" >Connecté en tant que :<b> <!--< ?=$_SESSION['Username']?>--></b></a></li>
+        <ul style="float:right"> test2
+            <li><a href="deco.php"> déconexion</a></li>
+            <li>grade</li>
+        </ul>
     </ul>
+    <br />
+    <br />
+    <br />
 
-    <?php ////////////////////////////////////////////////////////////////////affichage theme
-        $btheme = mysqli_query($link, "SELECT * FROM Themes");
-        if($btheme) {
-            ?>
-            <table>
-            <tr>
-                <th>Thèmes</th>
-            </tr>
-            <?php
-            while($atheme=mysqli_fetch_object($btheme)) {
-                echo "<tr>";
-                echo "<td>".$atheme->nom_theme."</td>";
-                ?>
-            
-            <?php
-                echo "</tr>";
+    <!--////////////////////////////////////////////////////////////////////affichage theme-->
+        <select name="theme" class="selecteur">
+        <option value="selection" hidden="">Theme</option>
+    
+        <?php
+              $resultat = mysqli_query($link,"SELECT nom_theme FROM Themes ");
+             if($resultat) {
+         ?>
+         <?php
+             while($nom=mysqli_fetch_object($resultat)) {
+                echo "<option>";
+                echo $nom->nom_theme;
+                echo "</option>";
             }
-            echo "</table>";
-        } else {
-            die("<p>erreur dans la requete<p>");
-        }
-        mysqli_close($link);
-        ?>
+            echo "</select>";
+            } else {
+                die("<p>erreur dans la requete<p>");
+            }
+         ?>
 
         <?php ////////////////////////////////////////////////////////////////////affichage partie
         $bpartie = mysqli_query($link, "SELECT * FROM  ListeTables");
@@ -65,11 +68,14 @@
         }
         mysqli_close($link);
         ?>
+
+        
+        <!--//////////////////////////////////////////////////////////////////////////////button-->
         <form method="post" action="creation_questions.php">
             <button name="set_question">Crée un set de question </button>
         </form>
 
-        <form method="post" /*action="creation_salle.php"*/>
+        <form method="post" action="http://dwarves.iut-fbleau.fr/~quintois/projet_wim/creation_salle.php">
             <button name="set_question">Crée une partie</button>
         </form>
     
