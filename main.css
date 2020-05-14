@@ -1,0 +1,97 @@
+body  {
+    background: linear-gradient(to right, teal, mediumseagreen, teal);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	overflow: hidden;
+	background-color: transparent;
+    border:solid ;
+    margin-bottom: 2em;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/*/////////////////////////////////////////////////////////////////////////*/
+
+.dropbtn {
+    background-color: #f1f1f1;
+    font-size: 16px;
+    border: none;
+    float: right;
+    height: 60px;
+    width: 100px;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100px;
+    position: fixed;
+    top:9%;
+    right:0.75em;
+}
+  
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown:hover .dropbtn {
+    opacity: 0.8;
+}
+
+.gauche{
+    display: block;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    height: 35em;
+    width: 38em;
+    position: absolute;
+    top: auto;
+    left: 5%;
+    border-radius: 0.5em;
+    border:solid 2px black;
+    padding: 2em;
+}
+.droite{
+    display: block;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    height: 35em;
+    width: 38em;
+    position: absolute;
+    top: auto;
+    right: 5%;
+    border-radius: 0.5em;
+    border:solid 2px black;
+    padding: 2em;
+}
+
