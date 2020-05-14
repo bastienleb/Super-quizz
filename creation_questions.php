@@ -33,14 +33,14 @@
     		<input type="text" name="question1" placeholder="Question 1" class="text_question" required>
     		<br/>
             <input type="text" name="reponseA" placeholder="Reponse A" class="align_gauche" required>
-            <input type="radio" name="reponse1" >
+            <input type="radio" name="reponse1" value="A">
     		<input type="text" name="reponseB" placeholder="Reponse B" class="align_droite" required>
-    		<input type="radio" name="reponse1" class="align_droite" >
+    		<input type="radio" name="reponse1" value="B" class="align_droite" >
     		<br/>
             <input type="text" name="reponseC" placeholder="Reponse C" class="align_gauche" required>
-            <input type="radio" name="reponse1" >            
+            <input type="radio" name="reponse1" value="C" >            
     		<input type="text" name="reponseD" placeholder="Reponse D" class="align_droite" required>
-    		<input type="radio" name="reponse1" class="align_droite" >
+    		<input type="radio" name="reponse1" value="D" class="align_droite" >
     	</div>
 
     	
