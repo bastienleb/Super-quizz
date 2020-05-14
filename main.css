@@ -7,7 +7,9 @@ ul {
     margin: 0;
     padding: 0;
 	overflow: hidden;
-	background-color: transparent;
+    background-color: black;
+    opacity: 0.5;
+    color: white;
     border:solid ;
     margin-bottom: 2em;
 }
@@ -23,8 +25,46 @@ li a {
 	text-decoration: none;
 }
 
-/*/////////////////////////////////////////////////////////////////////////*/
+table{
+    display: flex;
+    position: absolute;
+    left: 15%;
+    background-color: white;
+    border-radius: 0.5em;
+}
 
+tr {
+    background-color: rgb(126, 204, 204);
+
+}
+
+td{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 1em;
+    margin: 0%;
+}
+
+.buttonq, .buttonp {
+    width: 75%;
+    height: 5em;
+    text-align: center;
+    background-color:rgb(126, 204, 204);
+    border-radius: 2em;
+    border:2px solid white;
+    margin-bottom: 2.5em;
+    cursor: pointer;
+    color: white;
+
+}
+
+.buttonq:hover, .buttonp:hover{
+    padding: 2em;
+    transition: all;
+}
+/*---------------------------------------------------CLASS------------------------------------*/
 .dropbtn {
     background-color: #f1f1f1;
     font-size: 16px;
@@ -79,6 +119,8 @@ li a {
     border-radius: 0.5em;
     border:solid 2px black;
     padding: 2em;
+    padding-top: 1em;
+    text-align: center;
 }
 .droite{
     display: block;
@@ -93,5 +135,7 @@ li a {
     border-radius: 0.5em;
     border:solid 2px black;
     padding: 2em;
-}
+    padding-top: 1em;
+    text-align: center;
 
+}
