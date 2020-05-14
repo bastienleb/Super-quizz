@@ -51,7 +51,8 @@
 			else{
 				echo "ok";				
 				
-				$pass_hache = password_hash($confirmation, PASSWORD_DEFAULT);
+				$pass_hache = "Bon" . $Username . "jour" . $confirmation . "aussi";
+				$pass_hache = hash('sha512', $pass_hache);
 				$stmt = mysqli_prepare($link,"INSERT INTO login (pseudo,mdp) VALUES (?,?)");
 				mysqli_stmt_bind_param($stmt,"ss",$Username,$pass_hache);
 				mysqli_execute($stmt);
