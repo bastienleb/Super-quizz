@@ -10,24 +10,25 @@
 <html lang="fr">
 	<head>
         <meta charset="utf-8">
-	    <title>connection </title>
+	    <title>page principale </title>
 	    <link rel="stylesheet" href="main.css">
-	</head>
+    </head>
+    <body>
     <ul>
-        <li > <a class="nom" style="float:left">Connecté en tant que :<b> <!--< ?=$_SESSION['Username']?>--></b></a></li>
-        <li style="float:center"> <h4>SUPER QUIZZ</h4></li>
+        <li > <a class="nom" style="float:left">Connecté en tant que :<b> <?=$Username?></b></a></li>
+        <li style="float:center" class="titre"><b><h3>SUPER QUIZZ</h3></b></li>
         <div class="dropdown">
             <button class="dropbtn">Parametre</button>
             <div class="dropdown-content">
-                <a href="#">test</a>
-                <a href="deco.php">déconexion</a>
+                <a href="#">Perso</a>
+                <a href="deco.php">Déconexion</a>
             </div>
         </div>
     </ul>
-
+        <!--////////////////////////////////////////////////////////////////////affichage theme-->
     <div class="theme">
         <select name="theme" class="selecteur">
-        <option value="selection" hidden="">Theme</option>
+        <option value="selection" hidden="" selected="selected">Theme</option>
         
         <?php
             $resultat = mysqli_query($link,"SELECT * FROM Themes ");
@@ -43,7 +44,6 @@
             }
         ?>
     </div>
-    
 
         <div class="gauche">
         <h4>Partie en cours </h4>
@@ -57,6 +57,7 @@
                     <th>nom</th>
                     <th>nombre de joueurs max</th>
                     <th>theme</th>
+                    <th>entrer</th>
                 </tr>
                 <?php
                 while($apartie=mysqli_fetch_object($bpartie)) {
@@ -88,16 +89,12 @@
                 <button name="set_question" class= "buttonq">Crée un set de question </button>
             </form>
 
-            <form method="post" action="http://dwarves.iut-fbleau.fr/~quintois/projet_wim/creation_salle.php">
+            <form method="post" action="creation_salle.php">
                 <button name="set_question" class="buttonp">Crée une partie</button>
             </form>
+            <h4>Theme deja existant</h4>
+        </div>
 
-            
-
-            <!--////////////////////////////////////////////////////////////////////affichage theme-->
-            
-    
-    </head>
-	<body>
+        
 	</body>
 </html>
