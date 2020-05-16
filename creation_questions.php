@@ -44,7 +44,8 @@
     	</div>
 
     	
-    	<button type="submit" name="créer">Créer</button> 
+		<button type="submit" name="créer">Créer</button> <br/><br/>
+		<a href="main.php">Retourner à la page principale</a>
     </form>
 
     <?php
