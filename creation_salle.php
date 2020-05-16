@@ -48,7 +48,8 @@
     			}
  			?>
     	</select>
-    	<button type="submit" name="créer">Créer</button> 
+        <button type="submit" name="créer">Créer</button>
+        <a href="main.php">Retourner à la page principale</a> 
    	</form>
 
    	<?php
