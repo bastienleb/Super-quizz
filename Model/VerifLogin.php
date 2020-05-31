@@ -18,7 +18,7 @@ require('connection.php');
 
 	if($hache['mdp'] == $password){
 		echo "Connection réussie" . "<br>";
-		header('Location: ../../Backup_pr_wim/main.php');
+		header('Location: main.php');
 
 	} else {
 		echo "Mauvais mot de passe <br>";
