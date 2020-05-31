@@ -1,3 +1,5 @@
+<?php require('../Model/VerifLogin.php'); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -8,7 +10,7 @@
 	<body>
 	<div class="all">
 		<img src='../public/Images/quizz_img.jpg'>
-		<form method = "post"action="../Controller/index.php">
+		<form method = "post" action="">
 			<label>Username: </label><br/>
 			<input type="text" name="Username" required>
 		
@@ -23,7 +25,7 @@
 
 			<button>se connecter</button>
 		</form>
-		<a href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/new_compte.php">Crée un compte</a>
+		<a href="new_compte.php">Crée un compte</a>
 	</div>	
 	</body>
 </html>
