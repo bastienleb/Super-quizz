@@ -1,3 +1,4 @@
+<?php //require('../Model/VerifSession1.php'); ?> 
 <?php require('../Model/VerifLogin.php'); ?>
 
 <!DOCTYPE html>
