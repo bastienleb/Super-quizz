@@ -38,8 +38,9 @@ button:active {
 
 .all{
     position: absolute;
-    top: 27.5%;
-    left: 37.5%;
+    top : 50%;
+    left : 50%;
+    transform: translateX(-50%) translateY(-50%);
     border-radius: 2em;
     background-color: rgb(126, 204, 204);
     border:solid 15px rgb(126, 204, 204);
