@@ -2,5 +2,4 @@
 	
 	require('connection.php');
 
-	echo "bonjour";
 ?>
