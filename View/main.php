@@ -1,6 +1,7 @@
 <?php //require('../Model/VerifSession2.php'); ?>
-<?php require('../Model/ListeThemes.php'); ?>
-<?php require('../Model/SelecteurThemes.php'); ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,7 +18,7 @@
             <button class="dropbtn">Parametre</button>
             <div class="dropdown-content">
                 <a href="#">Perso</a>
-                <a href="deco.php">Déconexion</a>
+                <a href="../Model/logout.php">Déconexion</a>
             </div>
         </div>
     </ul>
@@ -29,6 +30,8 @@
 
         <div class="gauche">
         <h4>Partie en cours </h4>
+            <?php require('../Model/ListeThemes.php'); ?>
+            <?php require('../Model/SelecteurThemes.php'); ?>
                     <!---------------------affichage partie-->
         </div>
 
