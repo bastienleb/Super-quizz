@@ -2,6 +2,7 @@
 
 require('connection.php');
 
+
 $resultat = mysqli_query($link,"SELECT * FROM Themes ");
     if($resultat) {
         while($nom=mysqli_fetch_object($resultat)) {
