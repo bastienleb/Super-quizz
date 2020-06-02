@@ -19,9 +19,11 @@
         echo "<td>".$apartie->nombre_joueurs."</td>";
         echo "<td>".$apartie->theme."</td>";
         echo "<td>";
+
+        $Nom = $apartie->Nom;
 ?>
 
-<input type="button" value="entrer">
+<input type="button" value="entrer" onclick="window.location.href='Room.php?nom=<?=$Nom?>'">
 <?php
     echo "</td>";
 ?>
