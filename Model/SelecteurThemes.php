@@ -1,7 +1,7 @@
 <?php
-require('connection.php');
+    require('connection.php');
 
-$bpartie = mysqli_query($link, "SELECT * FROM  ListeTables");
+    $bpartie = mysqli_query($link, "SELECT * FROM  ListeTables");
     if($bpartie) {
 ?>
 <table>
@@ -11,6 +11,7 @@ $bpartie = mysqli_query($link, "SELECT * FROM  ListeTables");
 <th>theme</th>
 <th>entrer</th>
 </tr>
+
 <?php
     while($apartie=mysqli_fetch_object($bpartie)) {
         echo "<tr>";
@@ -18,9 +19,12 @@ $bpartie = mysqli_query($link, "SELECT * FROM  ListeTables");
         echo "<td>".$apartie->nombre_joueurs."</td>";
         echo "<td>".$apartie->theme."</td>";
         echo "<td>";
-?><input type="button" value="entrer"><?php
+?>
+
+<input type="button" value="entrer">
+<?php
     echo "</td>";
-    ?>
+?>
                
 <?php
     echo "</tr>";
