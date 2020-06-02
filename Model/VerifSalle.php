@@ -16,13 +16,13 @@
       echo "Erreur: Nom de table déjà utilisé !";
     }else{
 
-   /* $salle = mysqli_prepare($link,"INSERT INTO ListeTables (Createur,Nom,nombre_joueurs,nombre_questions,theme) VALUES (?,?,?,?,?)");
+    $salle = mysqli_prepare($link,"INSERT INTO ListeTables (Createur,Nom,nombre_joueurs,nombre_questions,theme) VALUES (?,?,?,?,?)");
   	mysqli_stmt_bind_param($salle,"ssdds",$user,$nom,$nombre_joueurs,$nombre_questions,$nom_theme);
   	mysqli_execute($salle);
 
-    session_start();
-    $SESSION['nom'] = $nom;
-  	header("location: Room.php");*/
+    /*session_start();
+    $_SESSION['nom'] = $nom; */
+  	header("location: Room.php?nom=".$nom."");
     } 
   }
 ?>
