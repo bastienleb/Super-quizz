@@ -2,6 +2,20 @@ body  {
     background: linear-gradient(to right, teal, mediumseagreen, teal);
 }
 
+button{
+    background-color: white;
+    border: 2px solid;
+    border-radius: 0.75em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
 .all{
     display: inline-block;
     background-color: rgb(126, 204, 204);
@@ -12,33 +26,25 @@ body  {
     text-align: center;
     width: 50%;
     padding:1.5em;
-    border-radius: 0.25em;
+    border-radius: 0.75em;
+    border: solid
 }
 
 .question{
     display: inline-block;
-    background-color: chartreuse;
+    padding-left:0.75em;
+    padding-right: 0.75em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid;
 }
 
 .reponses{
     display: inline-block;
-    background-color: red;
+    background-color: mediumseagreen;
     padding-left: 5em;
     padding-right: 5em;
     padding-top: 1em;
-    border-radius: 0.25em;
-}
-
-#myProgress { /*Placement de lma barre vide*/
-	width: 90%;
- 	background-color: purple;
- 	text-align: center;
-    border-radius: 0.25em;
-    position: relative;
-    top: 90%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    margin-top: 2em;
+    border-radius: 0.5em;
 }
 
 .reponse_1, .reponse_2, .reponse_3, .reponse_4{
@@ -48,20 +54,28 @@ body  {
     margin-bottom: 1em;;
     padding-left: 1.5em;
     padding-right: 1.5em;
+    background-color:white;
+    border-radius: 0.75em;
+    border: 2px solid;
+    cursor: pointer;
 }
 
-.reponse_1{
-    background-color: chocolate;
+
+#myProgress { /*Placement de lma barre vide*/
+    width: 90%;
+    background-color: purple;
+ 	text-align: center;
+    border-radius: 0.5em;
+    position: relative;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin-top: 2em;
 }
 
-.reponse_2{
-    background-color: aquamarine;
-}
-
-.reponse_3{
-    background-color: mediumorchid;
-}
-
-.reponse_4{
-    background-color: wheat;
+#myBar { /*taille de la barre + couleur quand elle se remplie */
+    width: 0%;
+    height: 30px;
+    background-color: palevioletred;
+    border-radius: 0.25em; 
 }
