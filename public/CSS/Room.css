@@ -1,0 +1,67 @@
+body  {
+    background: linear-gradient(to right, teal, mediumseagreen, teal);
+}
+
+.all{
+    display: inline-block;
+    background-color: rgb(126, 204, 204);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    width: 50%;
+    padding:1.5em;
+    border-radius: 0.25em;
+}
+
+.question{
+    display: inline-block;
+    background-color: chartreuse;
+}
+
+.reponses{
+    display: inline-block;
+    background-color: red;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 1em;
+    border-radius: 0.25em;
+}
+
+#myProgress { /*Placement de lma barre vide*/
+	width: 90%;
+ 	background-color: purple;
+ 	text-align: center;
+    border-radius: 0.25em;
+    position: relative;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin-top: 2em;
+}
+
+.reponse_1, .reponse_2, .reponse_3, .reponse_4{
+    display: inline-block;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 1em;;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.reponse_1{
+    background-color: chocolate;
+}
+
+.reponse_2{
+    background-color: aquamarine;
+}
+
+.reponse_3{
+    background-color: mediumorchid;
+}
+
+.reponse_4{
+    background-color: wheat;
+}
