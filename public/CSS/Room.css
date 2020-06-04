@@ -31,7 +31,7 @@ button:active{
     display: inline-block;
     background-color: rgb(126, 204, 204);
     position: absolute;
-    top: 50%;
+    top: 57.5%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
@@ -112,8 +112,6 @@ button:active{
     border-radius: 0.25em; 
     text-align: center;
 }
-
-/*---------------------------------------------------------------------------------------------------*/
 
 .donnee{
     background-color: rgb(126, 204, 204);
