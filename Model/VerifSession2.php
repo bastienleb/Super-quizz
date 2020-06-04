@@ -1,13 +1,17 @@
 <?php
-	if(!isset($_COOKIE['Username'])) {
-       	if(isset($_POST['Username'])) {
-       	    setcookie('Username', $_POST['Username']);
-       	    $Username = json_decode($_POST['Username']); //////////////// A METTRE DANS LA PAGE APRES CETTE PAGE 
-       	}
-       	else {
-       	    header('Location: ../View/login.php');
-       	}
-   	} else {
-       	$Username = json_decode($_COOKIE['Username']);
-   	}
+    session_start(); 
+      if(isset($_SESSION['Username'])){
+        echo ("SESSION <br>" . " Pseudo : " . $_SESSION['Username'] . "<br>");
+      }
+      else if(isset($_POST['Username'])){
+        $_SESSION['Username'] = $_POST['Username'];
+
+        setcookie('pseudo', $_POST['Username']);
+
+        echo("POST <br>" ." Pseudo : " . $_SESSION['Username'] . "<br>");
+      }
+      else{
+        header('Location: ../View/login.php'  );
+        //echo "redirect";
+      }
 ?>
