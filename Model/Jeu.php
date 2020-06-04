@@ -3,16 +3,21 @@
 <link rel="stylesheet" type="text/css" href="../public/CSS/Room.css">
 	<?php	
 		require('connection.php');
+		$nom = $_GET['nom'];
+		
 		if(isset($_GET['nom'])){
-			$search = mysqli_query($link,"SELECT COUNT(*) AS existe_salle FROM ListeTables WHERE Nom = '".$_GET['nom']."'");
+			$search = mysqli_query($link,"SELECT COUNT(*) AS existe_salle FROM ListeTables WHERE Nom = '".$nom."'");
 			$data = mysqli_fetch_assoc($search);
-				
+			
+			/*$themes = $_GET['theme'];*/
+
 			if(($data['existe_salle'] == '0')){
 				header('Location:../View/main.php');
 			} else
-				echo "Titre </br></br>";
-				echo "Connecter dans la salle "."<b>".$_GET['nom']."</b></br>";
-				echo "Le theme de la salle est "."<b> A MODIFIER </b>";
+				echo "Connecter dans la salle "."<b>".$nom."</b></br></br>";
+				echo "Le theme de la salle est "."<b>"."A MODIFIER"."</b> </br></br>";
+
+				/*echo "test theme : ".$themes;*/
 		} else{
 			echo "La salle n'existe pas, redirection";
 			header('Location: ../View/main.php');
@@ -24,5 +29,5 @@
 		//}
 	?>
 
-<title>salle <?$_GET['nom']?></title>
+<title>salle <?php echo $nom?></title>
 </div>
