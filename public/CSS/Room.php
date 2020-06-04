@@ -4,7 +4,6 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    
     <link rel="stylesheet" type="text/css" href="../public/CSS/Room.css">
 </head>
 <body>
