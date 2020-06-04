@@ -112,3 +112,20 @@ button:active{
     border-radius: 0.25em; 
     text-align: center;
 }
+
+/*---------------------------------------------------------------------------------------------------*/
+
+.donnee{
+    background-color: rgb(126, 204, 204);
+    margin-top: 2em;
+    padding: 1.75em;
+    padding-top: 0.75em;
+    width: 17.5em;
+    position: absolute;
+    top: 12.5%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border: solid;
+    border-radius: 0.75em;
+    text-align: center;
+}
