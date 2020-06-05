@@ -15,7 +15,7 @@ button{
 }
 
 button:hover{
-    background-color:coral;
+    background-color:mediumseagreen;
 
 }
 
@@ -23,7 +23,7 @@ button:active{
 
     transform: translateY(4px);
     box-shadow: 2px 4px forestgreen;
-    background-color: blue;
+    background-color: teal;
     
 }
 
@@ -39,7 +39,6 @@ button:active{
     padding:1.5em;
     border-radius: 0.75em;
     border: solid;
-    /*transition: 2s;  /*            //////////////////////ANNIM BAS DROITE*/
 }
 
 
@@ -50,6 +49,7 @@ button:active{
     padding-bottom: 5px;
     border-bottom: 2px solid;
     cursor: default;
+
 }
 
 .reponses{
@@ -78,12 +78,12 @@ button:active{
 }
 
 .reponse_1:hover, .reponse_2:hover, .reponse_3:hover, .reponse_4:hover{
-    background-color: coral;
+    background-color: teal;
     
 }
 
 .reponse_1:active, .reponse_2:active, .reponse_3:active, .reponse_4:active{
-    background-color: blue;
+    background-color: mediumseagreen;
     transform: translateY(4px);
     box-shadow: 2px 4px forestgreen;
     
