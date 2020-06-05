@@ -1,5 +1,3 @@
-<?php require('../Model/Jeu.php'); ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,19 +5,15 @@
     <link rel="stylesheet" type="text/css" href="../public/CSS/Room.css">
 </head>
 <body>
-
+    <?php require('../Model/Jeu.php'); ?>
     <div class="all">
-        <div id="Question" class="question">ceci est la question </div></br></br>
-        <div id="reponses" class="reponses">
-            <div id="reponse1" class="reponse_1"> c'est la Réponse 1</div>
-            <div id="reponse2" class="reponse_2">c'est la Réponse 2</div></br>
-            <div id="reponse3" class="reponse_3">c'est la Réponse 3</div>
-            <div id="reponse4" class="reponse_4">c'est la Réponse 4</div></br></br>
-        </div>
+        
+        <?php require('../Model/Question.php'); ?>
         <div id="myProgress">
             <div id="myBar">0</div> 
         </div>        
         <br>
+
         <button onclick="move()">Commencer</button>
     </div>
 </body>
