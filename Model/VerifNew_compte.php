@@ -28,7 +28,7 @@
 					mysqli_stmt_bind_param($stmt,"ss",$Username,$pass_hache);
 					mysqli_execute($stmt);
 
-					header('../View/login.php');
+					header('location: login');
 				}
 			}
 		}
