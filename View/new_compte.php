@@ -1,14 +1,14 @@
-<?php require('../Model/VerifNew_compte.php'); ?>
+<?php //require('../Model/VerifNew_compte.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 	<title>Création de Compte</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="../public/CSS/new_compte.css">
+	<link rel="stylesheet" href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/CSS/new_compte.css">
 </head>
 <body>
 	<div class="all">
-		<img src='../public/Images/quizz_img.jpg'>
+		<img src='https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/Images/quizz_img.jpg'>
 		<form method="POST">
 			<b><label>Pseudo : </label></b><br/>
 			<b><input type="text" name="Username" required></b>
@@ -20,7 +20,7 @@
 			<input type="password" name="confirmation" required>
 			<br/><br/>
 			<button name="nouveau_compte"><b>Envoyer</b></button><br/>
-			<a href="login.php">connexion</a>
+			<a href="login">connexion</a>
 		</form>
 	</div>
 </body>
