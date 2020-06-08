@@ -25,6 +25,11 @@
 					$controller->Register();
 				}
 
+				if($tmp == 'MainController'){
+					$controller = new MainController();
+					$controller->VerifMain();
+				}
+
 				/*if(isset($route['action'])){
 					$model = $route['action'];
 					$controller->$model();

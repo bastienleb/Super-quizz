@@ -16,6 +16,11 @@
 				return $result;
 			}
 
+			if((count($parts) == 1) && ($parts[0] == "main")){
+				$result['controller'] = "MainController";
+				return $result;
+			}
+
 		/*	if ((count($parts) == 3) && ($parts[1] == "afficher") && ($parts[0] == "contact")){
 				$result['controller'] = "Contact";
 				$result['action'] = "afficherContact";
