@@ -1,6 +1,6 @@
 <?php
 
-require('connection.php');
+$link = connection::Connect();
 
 
 $resultat = mysqli_query($link,"SELECT * FROM Themes ");

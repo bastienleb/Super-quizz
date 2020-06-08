@@ -1,5 +1,5 @@
 <?php
-    require('connection.php');
+    $link = connection::Connect();
 
     $bpartie = mysqli_query($link, "SELECT * FROM  ListeTables");
     if($bpartie) {

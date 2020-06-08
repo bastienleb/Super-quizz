@@ -8,7 +8,7 @@
 	<head>
         <meta charset="utf-8">
 	    <title>page principale </title>
-	    <link rel="stylesheet" href="../public/CSS/main.css">
+	    <link rel="stylesheet" href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/CSS/main.css">
     </head>
     <body>
     <ul>
