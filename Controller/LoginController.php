@@ -5,3 +5,4 @@
 			VerifLogin::Verif();
 		}
 	}
+?>
