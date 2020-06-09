@@ -34,6 +34,21 @@
 					$controller = new QuestionsController();
 					$controller->VerifierQuestions();
 				}
+
+				if($tmp == 'SalleController'){
+					$controller = new SalleController();
+					$controller->VerificationSalle();
+				}
+
+				if($tmp == 'RoomController'){
+					$controller = new RoomController();
+					if(isset($route['action'])){
+						$model = $route['action'];
+						$controller->$model();
+					} else {
+						$controller->VerifLog();
+					}
+				}
 			}
 		}	
 

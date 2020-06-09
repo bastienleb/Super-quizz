@@ -24,6 +24,11 @@
 			if((count($parts) == 1) && ($parts[0] == "creation_questions")){
 				$result['controller'] = "QuestionsController";
 				return $result;
+			}
+
+			if((count($parts) == 1) && ($parts[0] == "creation_salle")){
+				$result['controller'] = "SalleController";
+				return $result;
 			}			
 
 			/*if ((count($parts) == 3) && ($parts[1] == "afficher") && ($parts[0] == "contact")){
