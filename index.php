@@ -1,4 +1,4 @@
 <?php
-	require('Kernel.php');
+	require_once('Kernel.php');
 	Kernel::run();
 ?>

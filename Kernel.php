@@ -7,7 +7,7 @@
 			// Analyser la requete
 			$query = isset($_GET['query']) ? $_GET['query'] : "";
 			$route = Routeur::analyze($query);
-			echo ($_GET['query']);
+			//echo ($_GET['query']);
 			// Instancier le controleur et
 			// executer l'action
 			$class = $route['controller'];
@@ -30,12 +30,9 @@
 					$controller->VerifMain();
 				}
 
-				/*if(isset($route['action'])){
-					$model = $route['action'];
-					$controller->$model();
-				} */
-				else{
-					$controller->VerifLog()/*Register()*/;
+				if($tmp == 'QuestionsController'){
+					$controller = new QuestionsController();
+					$controller->VerifierQuestions();
 				}
 			}
 		}	

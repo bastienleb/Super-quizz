@@ -21,7 +21,12 @@
 				return $result;
 			}
 
-		/*	if ((count($parts) == 3) && ($parts[1] == "afficher") && ($parts[0] == "contact")){
+			if((count($parts) == 1) && ($parts[0] == "creation_questions")){
+				$result['controller'] = "QuestionsController";
+				return $result;
+			}			
+
+			/*if ((count($parts) == 3) && ($parts[1] == "afficher") && ($parts[0] == "contact")){
 				$result['controller'] = "Contact";
 				$result['action'] = "afficherContact";
 				$result['params']['id'] = $parts[2];
