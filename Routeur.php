@@ -29,6 +29,12 @@
 			if((count($parts) == 1) && ($parts[0] == "creation_salle")){
 				$result['controller'] = "SalleController";
 				return $result;
+			}
+
+			if((count($parts) == 2) && ($parts[0] == "Room")){
+				$result['controller'] = 'RoomController';
+				$result['action'] = $parts[1];
+				return $result;
 			}			
 
 			/*if ((count($parts) == 3) && ($parts[1] == "afficher") && ($parts[0] == "contact")){
