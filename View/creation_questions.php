@@ -1,12 +1,11 @@
 <?php //require('../Model/VerifSession2.php'); ?>
-<?php require('../Model/VerifQuestions.php'); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 	<title>Créations questions</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../public/CSS/creation_questions.css">
+	<link rel="stylesheet" type="text/css" href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/CSS/creation_questions.css">
 </head>
 <body>
 	<label><b>CRÉATION DE QUESTION</b></label>
@@ -30,7 +29,7 @@
 
     	
 		<button type="submit" name="créer">Créer</button> <br/><br/>
-		<a href="main.php">Retourner à la page principale</a>
+		<a href="main">Retourner à la page principale</a>
     </form>
 </body>
 </html>
