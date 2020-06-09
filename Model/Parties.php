@@ -13,7 +13,7 @@
 
                     $Nom = $apartie->Nom;
 
-                    echo "<input type=\"button\" value=\"entrer\" onclick=\"window.location.href='Room.php?nom=<?=$Nom?>'\">";
+                    echo "<input type=\"button\" value=\"entrer\" onclick=\"window.location.href='Room/$Nom'\">";
                     echo "</td>";
                     echo "</tr>";
 	            }
