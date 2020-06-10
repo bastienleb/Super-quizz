@@ -12,8 +12,9 @@
                     echo "<td>";
 
                     $Nom = $apartie->Nom;
+                    $theme = $apartie->theme;
 
-                    echo "<input type=\"button\" value=\"entrer\" onclick=\"window.location.href='Room/$Nom'\">";
+                    echo "<input type=\"button\" value=\"entrer\" onclick=\"window.location.href='Room/$Nom/$theme'\">";
                     echo "</td>";
                     echo "</tr>";
 	            }
