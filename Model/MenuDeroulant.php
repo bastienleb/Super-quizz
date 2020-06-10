@@ -1,6 +1,8 @@
 <?php
     class MenuDeroulant {
-        function AfficherMenu() {
+        //public $resultat;
+
+        public function AfficherMenu() {
             $link = connection::Connect();
 
             $resultat = mysqli_query($link,"SELECT * FROM Themes ");
@@ -11,7 +13,7 @@
                         newOption.value = '<?php echo $nom->nom_theme; ?>'
                         newOption.innerHTML = '<?php echo $nom->nom_theme; ?>'
                         document.getElementById('selecte').appendChild(newOption);
-                    </script>"; */
+                    </script>"; */ 
                     echo "<option>";
                     echo $nom->nom_theme;
                     echo "</option>";
