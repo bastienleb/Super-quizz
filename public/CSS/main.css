@@ -51,9 +51,9 @@ td{
 
 select{
     position: absolute;
-    top:40em;
-    right:14.5em;
-    width: 28%;
+    left:50%;
+    transform: translateX(-50%) ;
+    width: 75%;
     height: 5em;
     border-radius: 1.5em;
     text-align: center;
