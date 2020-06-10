@@ -1,9 +1,13 @@
 <?php
 	class SalleController {
+		//public $Modele;
+		//public $resultat;
 		public function VerificationSalle() {
-			echo file_get_contents(__DIR__.'/../View/creation_salle.php');
+			//$this->Modele = new MenuDeroulant;
+			//$this->Modele->AfficherMenu();
+			require(__DIR__.'/../View/creation_salle.php');
 			VerifSalle::VerificSalle();
-			MenuDeroulant::AfficherMenu();
+			//MenuDeroulant::AfficherMenu();
 		}
 	}
 ?>
