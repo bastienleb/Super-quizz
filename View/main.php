@@ -35,14 +35,18 @@
         <!----------------------button---------------------->
         <div class="droite">
             <h4>Parametrer le jeu </h4>
-            <button name="set_question" class= "buttonq" onclick="window.location.href='creation_questions'">Crée un set de question</button>
+            <button name="set_question" class= "buttonq" onclick="window.location.href='creation_questions'">Créer un set de question</button>
             
-            <button name="set_question" class="buttonp" onclick="window.location.href='creation_salle'">Crée une partie</button>
+            <button name="set_question" class="buttonp" onclick="window.location.href='creation_salle'">Créer une partie</button>
 
             <h4>Theme deja existant</h4>
             <div class="theme"> <!--affichage theme-->
                 <select name="theme" class="selecteur">
-                <option value="selection" hidden="" selected="selected">Theme</option>
+                    <option value="selection" hidden="" selected="selected">Theme</option>
+                    <option value="Math">Math</option>
+                    <option value="Francais">Francais</option>
+                    <option value="sneakers">Sneakers</option>
+                </select>
             </div>
         </div>  
 	</body>
