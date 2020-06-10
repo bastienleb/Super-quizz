@@ -10,7 +10,14 @@
 <body>
 	<label><b>CRÉATION DE QUESTION</b></label>
     <form method="POST">
-    	<input type="text" name="theme" placeholder="Nom du thème" class="theme" required>
+    	<!--<input type="text" name="theme" placeholder="Nom du thème" class="theme" required>-->
+
+		<select name="theme" class="selecteur">
+            <option value="selection" hidden="" selected="selected">Theme</option>
+            <option value="Math">Math</option>
+            <option value="Francais">Francais</option>
+            <option value="sneakers">Sneakers</option>
+        </select>
     	<br/><br/>
 
     	<div class="question">
