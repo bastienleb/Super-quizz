@@ -42,13 +42,18 @@
 
 				if($tmp == 'RoomController'){
 					$controller = new RoomController();
-					if(isset($route['action'])){
+					$controller->ControllerJeu();
+					/*if(isset($route['action'])){
 						$model = $route['action'];
 						$controller->$model();
 					} else {
 						$controller->VerifLog();
-					}
+					} */
 				}
+				/*else {
+					//$controller = new LoginController();
+					//$controller->VerifLog();	
+				} */
 			}
 		}	
 

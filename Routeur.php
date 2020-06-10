@@ -31,7 +31,7 @@
 				return $result;
 			}
 
-			if((count($parts) == 2) && ($parts[0] == "Room")){
+			if((count($parts) == 3) && ($parts[0] == "Room")){
 				$result['controller'] = 'RoomController';
 				$result['action'] = $parts[1];
 				return $result;
