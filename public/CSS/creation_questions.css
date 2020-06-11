@@ -106,3 +106,17 @@ a{
     top: 0px;
     width: 200px;
 }
+
+select{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%) ;
+    width: 50%;
+    height: 3.5em;
+    border-radius: 1.5em;
+    text-align: center;
+    background-color: rgb(126, 204, 204);
+    border:2px solid white;
+    color: white;
+    cursor: pointer;
+}
