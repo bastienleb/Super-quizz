@@ -12,7 +12,7 @@
 		<div class="modif">
 			<form method="post"> 
 				<p>Modifier son pseudo:</p>
-				<input type="text" name="ModifierPseudo" placeholder="Nouveau Pseudo"></br></br>
+				<input type="text" name="ModifierPseudo" placeholder="Nouveau Pseudo" required></br></br>
 				<input type="submit" name="Changer" value="Changer">
 			</form>
 			</br></br>

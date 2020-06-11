@@ -5,6 +5,7 @@
    			$interdiction1 = '<';
             $interdiction2 = '>';
             $interdiction3 = '/';
+            $interdiction4 = ' ';
 
    			session_start(); //Vérif connection
             if(isset($_SESSION['Username']))
@@ -23,11 +24,17 @@
   				$test1 = stripos($Pseudo, $interdiction1);
                 $test2 = stripos($Pseudo, $interdiction2);
                 $test3 = stripos($Pseudo, $interdiction3);
+                $test4 = stripos($Pseudo, $interdiction4);
 
-                if($test1 == true || $test2 == true || $test3 == true)
+                $search = mysqli_query($link,"SELECT COUNT(*) AS existe_pseudo FROM login WHERE pseudo = '".$Pseudo."'");
+                $data = mysqli_fetch_assoc($search);
+
+                if($test1 == true || $test2 == true || $test3 == true || $test4 == true)
  					echo "<div class='error'> Votre Pseudo contient des caracteres interdits !</div>";
    				else if ($Pseudo = "")
    					echo "<div class='error'> Veuillez rentrer un pseudo ! </div>";
+                else if(($data['existe_pseudo'] != '0'))
+                    echo "<div class='error'> Pseudo déjà utilisé !</div>";
                 else{
                   	$update = "UPDATE login SET pseudo='$Pseudo' WHERE pseudo='$Username'";
                    	$ModifPseudo = mysqli_query($link, $update);
