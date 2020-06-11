@@ -1,4 +1,3 @@
-<?php //require('../Model/VerifNew_compte.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -20,7 +19,7 @@
 			<input type="password" name="confirmation" required>
 			<br/><br/>
 			<button name="nouveau_compte"><b>Envoyer</b></button><br/>
-			<a href="login">connexion</a>
+			<a href="login">Connexion</a>
 		</form>
 	</div>
 </body>

@@ -1,5 +1,4 @@
 <?php
-	//require('connection.php');
 	class VerifNew_compte {
 		public function VerifRegister() {
 			$link = connection::Connect();
@@ -7,6 +6,7 @@
 			$interdiction1 = '<';
             $interdiction2 = '>';
             $interdiction3 = '/';
+            $interdiction4 = ' ';
 
 			if(isset($_POST['Username']) && isset($_POST['mdp']) && isset($_POST['confirmation'])){
 				$Username = mysqli_real_escape_string($link, $_POST['Username']);
@@ -15,10 +15,11 @@
 
 				$search = mysqli_query($link,"SELECT COUNT(*) AS existe_pseudo FROM login WHERE pseudo = '".$Username."'");
 				$data = mysqli_fetch_assoc($search);
-
+/*------------On regarde si le Username contient des caractères------------*/
 				$test1 = stripos($Username, $interdiction1);
                 $test2 = stripos($Username, $interdiction2);
                 $test3 = stripos($Username, $interdiction3);
+                $test4 = stripos($Username, $interdiction4);
 
 				if(($data['existe_pseudo'] != '0'))
 					echo "<div class='error'> Pseudo déjà utilisé !</div>";
@@ -26,7 +27,7 @@
 					echo "<div class='error'> les deux mots de passes entrés sont différents !</div>";
 				}else if($confirmation == $Username){
 					echo "<div class='error'> le mot de passe ne peut pas être le même que le pseudo !</div>";
-				}else if($test1 == true || $test2 == true || $test3 == true)
+				}else if($test1 == true || $test2 == true || $test3 == true || $test4 == true)
                     echo "<div class='error'>  Votre Pseudo contient des caracteres interdits !</div>";
 				else{
 					echo "ok";				
