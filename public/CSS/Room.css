@@ -127,3 +127,10 @@ button:active{
     border-radius: 0.75em;
     text-align: center;
 }
+
+/*--------------------------------------TEST---------------*/
+
+b{
+    background-color: chartreuse;
+}
+
