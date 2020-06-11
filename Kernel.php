@@ -50,6 +50,17 @@
 						$controller->VerifLog();
 					} */
 				}
+
+				if($tmp == 'LogoutController'){
+					$controller = new LogoutController();
+					$controller->Logout();
+				}
+
+				if($tmp == 'ControllerPersoCompte'){
+					$controller = new ControllerPersoCompte();
+					$controller->VerifCompte();
+				}
+
 				/*else {
 					//$controller = new LoginController();
 					//$controller->VerifLog();	

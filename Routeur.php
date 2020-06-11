@@ -35,6 +35,16 @@
 				$result['controller'] = 'RoomController';
 				$result['action'] = $parts[1];
 				return $result;
+			}
+
+			if((count($parts) == 1) && ($parts[0] == "logout")){
+				$result['controller'] = "LogoutController";
+				return $result;
+			}
+
+			if((count($parts) == 1) && ($parts[0] == "options")){
+				$result['controller'] = "ControllerPersoCompte";
+				return $result;
 			}			
 
 			/*if ((count($parts) == 3) && ($parts[1] == "afficher") && ($parts[0] == "contact")){
@@ -44,7 +54,7 @@
 			return $result;
 			} */
 
-			$result['controller'] = 'LoginController';
+			$result['controller'] = 'MainController';
 			return $result;
 		}
 	}
