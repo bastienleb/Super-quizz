@@ -20,7 +20,7 @@
         </div>
     </ul>
     <div class="gauche">
-        <h4>Parties en cours </h4>
+        <h4 class="titre_partie">Parties en cours </h4>
         <!-------------------affichage partie---------------->    
         <table>
             <tr>
