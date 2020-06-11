@@ -1,6 +1,19 @@
 <?php
   class VerifQuestions {
     public function VerifQuestion() {
+
+        $link = connection::Connect();
+
+        session_start();
+        if(isset($_SESSION['Username']))
+            $Username = $_SESSION['Username'];
+        else if(isset($_POST['Username'])){
+            $_SESSION['Username'] = $_POST['Username'];
+            setcookie('pseudo', $_POST['Username']);
+        } else {
+            header('Location: login');
+        }
+
         if(isset($_POST['theme']) && isset($_POST['question1']) && isset($_POST['reponseA']) && isset($_POST['reponseB']) && isset($_POST['reponseC']) && isset($_POST['reponseD']) && isset($_POST['reponse1'])){
             $theme = mysqli_real_escape_string($link, $_POST['theme']);
             $question1 = mysqli_real_escape_string($link, $_POST['question1']);
