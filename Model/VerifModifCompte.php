@@ -26,18 +26,17 @@
 
                 if($test1 == true || $test2 == true || $test3 == true)
 					echo "Erreur : Votre Pseudo contient des caracteres interdits !";
-				/*else if ($Pseudo = '')
-					echo "Veuillez rentrer un pseudo !";*/
+				else if ($Pseudo = "\"")
+					echo "Veuillez rentrer un pseudo !";
                 else{
-                //	$update = "UPDATE login SET pseudo='$Pseudo' WHERE pseudo='$Username'";
-                	//$ModifPseudo = mysqli_query($link, $update);
-                	//if(!$ModifPseudo)
-                	//	die("<p>Erreur Modification de pseudo</p>");
-                	//else{
-						echo "'".$Pseudo."'";
+                	$update = "UPDATE login SET pseudo='$Pseudo' WHERE pseudo='$Username'";
+                	$ModifPseudo = mysqli_query($link, $update);
+                	if(!$ModifPseudo)
+                		die("<p>Erreur Modification de pseudo</p>");
+                	else{
                 		echo "<div class='bon'>Pseudo mis à jour</div>";
                 		$_SESSION['Username'] = $Pseudo;
-                	//}
+                	}
                 }
 			}
 
@@ -51,20 +50,22 @@
 				$Ancienpassword = hash('sha512', $Ancienpassword);
 				$hache = mysqli_fetch_array($VerifAncienMDP);
 
-				if($hache['mdp'] != $Ancienpassword){
+				if($hache['mdp'] != $Ancienpassword)
 					echo "Ancien Mot de passe incorrect";
-				}else if($ConfirmMDP != $NouveauMDP){
+				else if($ConfirmMDP == "" || $NouveauMDP == "")
+					echo "Veuillez rentrer un mot de passe!";
+				else if($ConfirmMDP != $NouveauMDP)
 					echo "Confirmation de mot de passe incorrect";
-				}else if($ConfirmMDP == $Username){
+				else if($ConfirmMDP == $Username)
 					echo "Erreur: le mot de passe ne peut pas être le même que le pseudo !";
-				}else{
+				else{
 					$Nouveaupassword = "Bon" . $Username . "jour" . $ConfirmMDP. "aussi";
 					$Nouveaupassword = hash('sha512', $Nouveaupassword);
 					$update = "UPDATE login SET mdp='$Nouveaupassword' WHERE pseudo='$Username'";
 					$hacheNew = mysqli_query($link, $update);
 					if(!$hacheNew)
 						die("<p>Erreur Modification de Mot de passe</p>");
-					else
+					else 
 						echo "<div class='bon'>Mot de passe mis à jour ! </div>";
 				}
 			}
