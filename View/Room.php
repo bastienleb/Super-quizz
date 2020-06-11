@@ -7,7 +7,8 @@
 <body>
     <div class="all">
         
-        <?php //require('../Model/Question.php'); ?>
+        <?php require('../Model/Question.php'); ?>
+
         <div id="myProgress">
             <div id="myBar">0</div> 
         </div>        
