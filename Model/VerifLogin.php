@@ -11,7 +11,7 @@
 				$Pseudo = mysqli_real_escape_string($link, $_POST['Username']);
     			$MDP = mysqli_real_escape_string($link, $_POST['Password']);
     		} else {
-    			$Pseudo = "Arnaud";
+    			$Pseudo = "///";
     			$MDP = "$$$";
 			}
 
@@ -21,7 +21,6 @@
 			$password = "Bon" . $Pseudo . "jour" . $MDP. "aussi";
 			$password = hash('sha512', $password);
 			$hache = mysqli_fetch_array($test);
-
 			if($hache['mdp'] == $password){
 				$_SESSION['Username'] = $Pseudo;
 				echo "<div class='bon'> Connection réussie <br></div>";

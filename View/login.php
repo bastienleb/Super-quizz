@@ -4,7 +4,7 @@
 	    <meta charset="utf-8">
 	    <title>connection </title>
 	    <link rel="stylesheet" href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/CSS/login.css">
-	</head>s
+	</head>
 	<body>
 	<div class="all">
 		<img src='https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/Images/quizz_img.jpg'>
