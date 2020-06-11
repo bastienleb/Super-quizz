@@ -36,13 +36,8 @@
 					/*echo "test theme : ".$themes;*/
 			} else{
 				echo "La salle n'existe pas, redirection";
-				//header('Location:main');
+				header('Location: ../../main');
 			}
-			/**session_start();
-			if(isset($_SESSION['nom'])){
-				$nom_salle = $_SESSION['nom'];
-				echo $nom_salle; */
-			//}
 		}
 	}
 ?>
