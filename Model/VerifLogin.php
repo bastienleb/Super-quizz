@@ -1,8 +1,12 @@
 <?php
-		//require('../View/login.php');
 	class VerifLogin {
 		public function Verif() {
 			$link = connection::Connect();
+
+			session_start();
+			if(isset($_SESSION['Username']))
+				header('Location: main');
+
 			if(isset($_POST['Username']) && isset($_POST['Password'])) {
 				$Pseudo = mysqli_real_escape_string($link, $_POST['Username']);
     			$MDP = mysqli_real_escape_string($link, $_POST['Password']);
@@ -17,6 +21,7 @@
 			$hache = mysqli_fetch_array($test);
 
 			if($hache['mdp'] == $password){
+				$_SESSION['Username'] = $Pseudo;
 				echo "Connection réussie" . "<br>";
 				header('Location: main');
 
