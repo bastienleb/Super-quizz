@@ -30,14 +30,21 @@
 				if(($data['existe_salle'] == '0')){
 					header('Location: ../../main');
 				} else
-					echo "<div class='donnee'><p>Connecté dans la salle "."<b>".$nom."</b></br></br></p>";
-					echo "<p>Le thème de la salle est "."<b>".$theme."</b> </br></p></div>";
+					echo "<div class='test'>"."<div class='donnee'>"; // A REGARDER PLUS TARD SI SA CHANGE 
+					echo "<p>Connecté dans la salle "."<b>".$nom."</b></br></br></p>";
+					echo "<p>Le thème de la salle est "."<b>".$theme."</b> </br></p>";
+					echo "</div>"."</div>";
 
 					/*echo "test theme : ".$themes;*/
 			} else{
 				echo "La salle n'existe pas, redirection";
-				header('Location: ../../main');
+				//header('Location:main');
 			}
+			/**session_start();
+			if(isset($_SESSION['nom'])){
+				$nom_salle = $_SESSION['nom'];
+				echo $nom_salle; */
+			//}
 		}
 	}
 ?>
