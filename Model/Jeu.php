@@ -1,10 +1,21 @@
 
 <div class=donnee>
-<link rel="stylesheet" type="text/css" href="../public/CSS/Room.css">
+<link rel="stylesheet" type="text/css" href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/CSS/Room.css">
 <?php
 	class Jeu {
 		public function Jouer() {
 			$link = connection::Connect();
+
+			session_start();
+            if(isset($_SESSION['Username']))
+                $Username = $_SESSION['Username'];
+            else if(isset($_POST['Username'])){
+                $_SESSION['Username'] = $_POST['Username'];
+
+                setcookie('pseudo', $_POST['Username']);
+            } else {
+                header('Location: ../../login');
+            }
 
 			$query = isset($_GET['query']) ? $_GET['query'] : "";
 			$parts = explode("/", $query);			
@@ -13,13 +24,14 @@
 				$nom = $parts[1];
 				$theme = $parts[2];
 				//echo $nom;
-				$search = mysqli_query($link,"SELECT COUNT(*) AS existe_salle FROM ListeTables WHERE Nom = '".$nom."'");
+				//AND theme = '".$theme."'
+				$search = mysqli_query($link,"SELECT COUNT(*) AS existe_salle FROM ListeTables WHERE Nom = '".$nom."' AND theme = '".$theme."'");
 				$data = mysqli_fetch_assoc($search);
 			
 				/*$themes = $_GET['theme'];*/
 
 				if(($data['existe_salle'] == '0')){
-				//	header('Location:main');
+					header('Location: ../../main');
 				} else
 					echo "Connecté dans la salle "."<b>".$nom."</b></br></br>";
 					echo "Le thème de la salle est "."<b>".$theme."</b> </br></br>";
