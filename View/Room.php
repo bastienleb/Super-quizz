@@ -17,4 +17,4 @@
         <button onclick="move()">Commencer</button>
     </div>
 </body>
-</html>
+</html
