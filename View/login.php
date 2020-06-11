@@ -1,6 +1,3 @@
-<?php //require('../Model/VerifSession1.php'); ?> 
-<?php //require('../Model/VerifLogin.php'); ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -26,7 +23,7 @@
 
 			<button>se connecter</button>
 		</form>
-		<a href="new_compte">Crée un compte</a>
+		<a href="new_compte">Créer un compte</a>
 	</div>	
 	</body>
 </html>

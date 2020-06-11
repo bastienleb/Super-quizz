@@ -15,6 +15,8 @@
     			$MDP = "$$$";
 			}
 
+/*--------------------On compare le mdp haché avec le mdp de la bdd----*/
+			
 			$test = mysqli_query($link,"SELECT mdp FROM login WHERE pseudo = '".$Pseudo."'");
 			$password = "Bon" . $Pseudo . "jour" . $MDP. "aussi";
 			$password = hash('sha512', $password);
