@@ -25,16 +25,19 @@
                 $test3 = stripos($Pseudo, $interdiction3);
 
                 if($test1 == true || $test2 == true || $test3 == true)
-                    echo "Erreur : Votre Pseudo contient des caracteres interdits !";
+					echo "Erreur : Votre Pseudo contient des caracteres interdits !";
+				/*else if ($Pseudo = '')
+					echo "Veuillez rentrer un pseudo !";*/
                 else{
-                	$update = "UPDATE login SET pseudo='$Pseudo' WHERE pseudo='$Username'";
-                	$ModifPseudo = mysqli_query($link, $update);
-                	if(!$ModifPseudo)
-                		die("<p>Erreur Modification de pseudo</p>");
-                	else{
-                		echo "Pseudo mis à jour";
+                //	$update = "UPDATE login SET pseudo='$Pseudo' WHERE pseudo='$Username'";
+                	//$ModifPseudo = mysqli_query($link, $update);
+                	//if(!$ModifPseudo)
+                	//	die("<p>Erreur Modification de pseudo</p>");
+                	//else{
+						echo "'".$Pseudo."'";
+                		echo "<div class='bon'>Pseudo mis à jour</div>";
                 		$_SESSION['Username'] = $Pseudo;
-                	}
+                	//}
                 }
 			}
 
@@ -62,7 +65,7 @@
 					if(!$hacheNew)
 						die("<p>Erreur Modification de Mot de passe</p>");
 					else
-						echo "Mot de passe mis à jour !";
+						echo "<div class='bon'>Mot de passe mis à jour ! </div>";
 				}
 			}
 		}
