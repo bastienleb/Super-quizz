@@ -47,14 +47,15 @@ h1{
     margin-top: 2.5em;
 }
 
-.error{
-    height: 1.5em;
-    padding: 5px;
-    position: absolute;
-    left: 50%;
-    top: 25%;
-    transform: translateX(-50%);
-    border-radius: 0.5em;
-    font-weight: bold;
-    background-color: red;
+/*enlever les fleche dif nav*/
+
+/*FIREFOX*/
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/*CHROME*/
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
 }
