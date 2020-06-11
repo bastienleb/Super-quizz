@@ -22,11 +22,11 @@
 
 			if($hache['mdp'] == $password){
 				$_SESSION['Username'] = $Pseudo;
-				echo "Connection réussie" . "<br>";
+				echo "<div class='bon'> Connection réussie <br></div>";
 				header('Location: main');
 
 			} else {
-				echo "Mauvais mot de passe <br>";
+				echo "<div class='error'> Mauvais mot de passe <br></div>";
 			}
 		}
 	}
