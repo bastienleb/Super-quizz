@@ -1,5 +1,3 @@
-<?php //require('../Model/VerifSession2.php'); ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,8 +8,6 @@
 <body>
 	<label><b>CRÉATION DE QUESTION</b></label>
     <form method="POST">
-    	<!--<input type="text" name="theme" placeholder="Nom du thème" class="theme" required>-->
-
 		<select name="theme" class="selecteur">
             <option value="selection" hidden="" selected="selected">Theme</option>
             <option value="Math">Math</option>
@@ -34,7 +30,6 @@
     		<input type="radio" name="reponse1" value="D">
     	</div>
 
-    	
 		<button type="submit" name="créer">Créer</button> <br/><br/>
 		<a href="main">Retourner à la page principale</a>
     </form>
