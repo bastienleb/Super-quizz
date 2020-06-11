@@ -14,7 +14,7 @@
 
                 setcookie('pseudo', $_POST['Username']);
             } else {
-                header('Location: ../../login');
+                header('Location: login');
             }
 
 			if(isset($_POST['ModifierPseudo'])){ //Verif changement pseudo
@@ -25,7 +25,7 @@
                 $test3 = stripos($Pseudo, $interdiction3);
 
                 if($test1 == true || $test2 == true || $test3 == true)
-                    echo "Erreur : Votre nom de Salle contient des caracteres interdits !";
+                    echo "Erreur : Votre Pseudo contient des caracteres interdits !";
                 else{
                 	$update = "UPDATE login SET pseudo='$Pseudo' WHERE pseudo='$Username'";
                 	$ModifPseudo = mysqli_query($link, $update);
