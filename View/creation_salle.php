@@ -1,4 +1,3 @@
-<?php //require('../Model/VerifSession2.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,7 +6,7 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<h1 class="titre">Création de partie</h1>
+	<h1 class="titre">Créer une partie</h1>
 	<form method="POST">
 		<label>Nom de la salle:</label>
 		<input type="text" name="nom" placeholder="Nom de la salle" required>
@@ -15,7 +14,7 @@
 		<label>Nombre de joueurs max:</label>
 		<input type="number" min="2" name="nombre_joueurs" placeholder="nombre de joueurs" required>
 		<br/><br/>
-		<label>Nombre de question:</label>
+		<label>Nombre de questions:</label>
 		<input type="number" min="2" name="nombre_questions" placeholder="nombre de questions" required>
 		<br/><br/>
 
