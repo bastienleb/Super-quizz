@@ -2,6 +2,18 @@
     class Parties {
         public function AfficherParties() {
             $link = connection::Connect();
+
+            session_start();
+            if(isset($_SESSION['Username']))
+                $Username = $_SESSION['Username'];
+            else if(isset($_POST['Username'])){
+                $_SESSION['Username'] = $_POST['Username'];
+
+                setcookie('pseudo', $_POST['Username']);
+            } else {
+                header('Location: login');
+            }
+            
             $bpartie = mysqli_query($link, "SELECT * FROM  ListeTables");
             if($bpartie) {
                 while($apartie=mysqli_fetch_object($bpartie)) {
