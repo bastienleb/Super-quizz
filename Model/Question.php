@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="../public/CSS/Room.css">
 <?php
 
 require('connection.php');
@@ -8,33 +7,18 @@ $resultat = mysqli_query($link,"SELECT * FROM Questions WHERE Theme= 'sneacker' 
     if($resultat) {
         while($nom=mysqli_fetch_object($resultat)) {
             /*echo "<b>".$nom->Theme;*/
-            ?>
+            
+            
+            echo "<div class='question'><b>".$nom->Question." ? </b></div></br>";
+            
+            echo "<div id='reponses' class='reponses'>";
 
-            <div class="question">
-                <?php echo "<b>".$nom->Question." ? </b>"?>
-            </div>
-            </br>
-            <div id="reponses" class="reponses">
-
-                <div id="reponse1" class="reponse_1" href="#">
-                    <?php echo $nom->Reponse_A; ?>
-                </div>
-
-                <div id="reponse2" class="reponse_2">
-                    <?php echo $nom->Reponse_B; ?>
-                </div>
-                </br>
-                <div id="reponse3" class="reponse_3">
-                    <?php echo $nom->Reponse_C; ?>
-                </div>
-
-                <div id="reponse4" class="reponse_4">
-                    <?php echo $nom->Reponse_D;?>
-                </div>
-            </div>
-            <?php
+            echo "<div id='reponse1' class='reponse_1'>".$nom->Reponse_A;."</div>";
+            echo "<div id='reponse1' class='reponse_2'>".$nom->Reponse_B;."</div></br>";
+            echo "<div id='reponse1' class='reponse_3'>".$nom->Reponse_C;."</div>";
+            echo "<div id='reponse1' class='reponse_4'>".$nom->Reponse_D;."</div>";
         }
-    } else {
+    }else {
         die("<p>erreur dans la requete<p>");
     }
 ?>
