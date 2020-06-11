@@ -29,7 +29,7 @@
                 $data = mysqli_fetch_assoc($search);
 
                 if(($data['existe_salle'] != '0')){
-                    echo "Erreur: Nom de table déjà utilisé !";
+                    echo "<div class='error'> Nom de salle déjà utilisé !";
                 }else{
 
                     $test1 = stripos($NomSalle, $interdiction1);
@@ -37,9 +37,9 @@
                     $test3 = stripos($NomSalle, $interdiction3);
 
                     if($test1 == true || $test2 == true || $test3 == true)
-                        echo "Erreur : Votre nom de Salle contient des caracteres interdits !";
+                        echo "<div class='error'> Votre nom de Salle contient des caracteres interdits !";
                     else if($nom_theme == 'selection')
-                        echo "Erreur : Veuillez selectionner un thème";
+                        echo "<div class='error'> Veuillez selectionner un thème </div>";
                     else{
 
                         $salle = mysqli_prepare($link,"INSERT INTO ListeTables (Createur,Nom,nombre_joueurs,nombre_questions,theme) VALUES (?,?,?,?,?)");
