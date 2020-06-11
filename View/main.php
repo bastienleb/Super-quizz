@@ -20,14 +20,14 @@
         </div>
     </ul>
     <div class="gauche">
-        <h4>Partie en cours </h4>
+        <h4>Parties en cours </h4>
         <!-------------------affichage partie---------------->    
         <table>
             <tr>
-                <th>nom</th>
-                <th>nombre de joueurs max</th>
-                <th>theme</th>
-                <th>entrer</th>
+                <th>Nom</th>
+                <th>Nombre de joueurs max</th>
+                <th>Theme</th>
+                <th>Entrer</th>
             </tr>
     </div>
 
@@ -39,10 +39,10 @@
             
             <button name="set_question" class="buttonp" onclick="window.location.href='creation_salle'">Créer une partie</button>
 
-            <h4>Theme deja existant</h4>
+            <h4>Thèmes déjà existants</h4>
             <div class="theme"> <!--affichage theme-->
                 <select name="theme" class="selecteur">
-                    <option value="selection" hidden="" selected="selected">Theme</option>
+                    <option value="selection" hidden="" selected="selected">Thèmes</option>
                     <option value="Math">Math</option>
                     <option value="Francais">Francais</option>
                     <option value="sneakers">Sneakers</option>
