@@ -24,13 +24,18 @@
             $reponse1 = mysqli_real_escape_string($link, $_POST['reponse1']);
         
             $i = 1;
-            /*$add_theme = mysqli_prepare($link,"INSERT INTO Themes (Createur,nom_theme) VALUES (?,?)");
-            mysqli_stmt_bind_param($add_theme,"ss",$user,$theme);
-            mysqli_execute($add_theme); */
+
+            if($theme == 'selection')
+                echo "Veuillez sélectionner un thème !";
+            else{
+                /*$add_theme = mysqli_prepare($link,"INSERT INTO Themes (Createur,nom_theme) VALUES (?,?)");
+                mysqli_stmt_bind_param($add_theme,"ss",$user,$theme);
+                mysqli_execute($add_theme); */
     
-            $question = mysqli_prepare($link,"INSERT INTO Questions (Theme,Question,num_Question,Reponse_A,Reponse_B,Reponse_C,Reponse_D,Bonne_reponse) VALUES (?,?,?,?,?,?,?,?)");
-            mysqli_stmt_bind_param($question,"ssdsssss",$theme,$question1,$i,$reponseA,$reponseB,$reponseC,$reponseD,$reponse1);
-            mysqli_execute($question);
+                $question = mysqli_prepare($link,"INSERT INTO Questions (Theme,Question,num_Question,Reponse_A,Reponse_B,Reponse_C,Reponse_D,Bonne_reponse) VALUES (?,?,?,?,?,?,?,?)");
+                mysqli_stmt_bind_param($question,"ssdsssss",$theme,$question1,$i,$reponseA,$reponseB,$reponseC,$reponseD,$reponse1);
+                //mysqli_execute($question);
+            }
         }
     }
   } 
