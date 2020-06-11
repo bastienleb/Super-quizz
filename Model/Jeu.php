@@ -1,6 +1,3 @@
-
-<div class=donnee>
-<link rel="stylesheet" type="text/css" href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/CSS/Room.css">
 <?php
 	class Jeu {
 		public function Jouer() {
@@ -33,8 +30,8 @@
 				if(($data['existe_salle'] == '0')){
 					header('Location: ../../main');
 				} else
-					echo "Connecté dans la salle "."<b>".$nom."</b></br></br>";
-					echo "Le thème de la salle est "."<b>".$theme."</b> </br></br>";
+					echo "<div class='donnee'><p>Connecté dans la salle "."<b>".$nom."</b></br></br></p>";
+					echo "<p>Le thème de la salle est "."<b>".$theme."</b> </br></p></div>";
 
 					/*echo "test theme : ".$themes;*/
 			} else{
@@ -49,6 +46,3 @@
 		}
 	}
 ?>
-
-<title>salle <?php// echo $nom?></title>
-</div>
