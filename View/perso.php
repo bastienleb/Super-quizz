@@ -10,7 +10,7 @@
 		<h1>Que souhaitez vous faire ?</h1>
 		</br></br>
 		<div class="modif">
-			<form method="post">
+			<form method="post"> 
 				<p>Modifier son pseudo:</p>
 				<input type="text" name="ModifierPseudo" placeholder="Nouveau Pseudo"></br></br>
 				<input type="submit" name="Changer" value="Changer">
