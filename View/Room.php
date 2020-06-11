@@ -16,9 +16,10 @@
 
         <button onclick="test()" id="button">Commencer</button>
     </div>
+    <a href="../../../main">Retourner au main</a>
 </body>
 
-<script>
+<script type="text/javascript">
 var i = 0;
 function move() {
   if (i == 0) {
@@ -32,7 +33,7 @@ function move() {
         i = 0;
         move();
 
-        /*location.replace("main.php");*/
+        /*location.replace("main");*/
       } else {
         width++;
         elem.style.width = width + "%";
