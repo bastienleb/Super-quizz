@@ -7,5 +7,11 @@
 				die("<p>connexion impossible</p>");
 			return $link;
 		}
+
+		public function LogOut() {
+			session_start();
+			session_destroy();
+			header('Location: login');
+		}
 	}
 ?>
