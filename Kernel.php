@@ -1,5 +1,4 @@
 <?php
-	//require('Routeur.php');
 	class Kernel {
 		public static function run() {
 			// Autoload des classes
@@ -7,14 +6,12 @@
 			// Analyser la requete
 			$query = isset($_GET['query']) ? $_GET['query'] : "";
 			$route = Routeur::analyze($query);
-			//echo ($_GET['query']);
-			// Instancier le controleur et
-			// executer l'action
+			// Instancier le controleur et executer l'action
 			$class = $route['controller'];
-			//echo $class;
+
 			if(class_exists($class)) { 	
 				$tmp = $route['controller'];
-				//echo $tmp;
+
 				if($tmp == 'LoginController'){
 					$controller = new LoginController();
 					$controller->VerifLog();
@@ -43,12 +40,6 @@
 				if($tmp == 'RoomController'){
 					$controller = new RoomController();
 					$controller->ControllerJeu();
-					/*if(isset($route['action'])){
-						$model = $route['action'];
-						$controller->$model();
-					} else {
-						$controller->VerifLog();
-					} */
 				}
 
 				if($tmp == 'LogoutController'){
@@ -60,11 +51,6 @@
 					$controller = new ControllerPersoCompte();
 					$controller->VerifCompte();
 				}
-
-				/*else {
-					//$controller = new LoginController();
-					//$controller->VerifLog();	
-				} */
 			}
 		}	
 
