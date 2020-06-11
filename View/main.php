@@ -12,9 +12,9 @@
         <li><a class="nom" style="float:left">Connecté en tant que :<b> <?=$Username?></b></a></li>
         <li style="float:center" class="titre"><b><h3>SUPER QUIZZ</h3></b></li>
         <div class="dropdown">
-            <button class="dropbtn">Parametre</button>
+            <button class="dropbtn">Paramètres</button>
             <div class="dropdown-content">
-                <a href="#">Perso</a>
+                <a href="options">Perso</a>
                 <a href="logout">Déconexion</a>
             </div>
         </div>
