@@ -46,7 +46,7 @@
                         mysqli_stmt_bind_param($salle,"ssdds",$user,$NomSalle,$nombre_joueurs,$nombre_questions,$nom_theme);
                         mysqli_execute($salle);
 
-                        header("location: Room/$NomSalle/$nom_theme");
+                        header("location: Room/$NomSalle/$nom_theme/$nombre_joueurs/");
                     }
                 }
             }

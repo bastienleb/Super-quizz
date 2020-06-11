@@ -32,8 +32,8 @@
                 mysqli_stmt_bind_param($add_theme,"ss",$user,$theme);
                 mysqli_execute($add_theme); */
     
-                $question = mysqli_prepare($link,"INSERT INTO Questions (Theme,Question,num_Question,Reponse_A,Reponse_B,Reponse_C,Reponse_D,Bonne_reponse) VALUES (?,?,?,?,?,?,?,?)");
-                mysqli_stmt_bind_param($question,"ssdsssss",$theme,$question1,$i,$reponseA,$reponseB,$reponseC,$reponseD,$reponse1);
+                $question = mysqli_prepare($link,"INSERT INTO Questions (Pseudo,Theme,Question,num_Question,Reponse_A,Reponse_B,Reponse_C,Reponse_D,Bonne_reponse) VALUES (?,?,?,?,?,?,?,?,?)");
+                mysqli_stmt_bind_param($question,"sssdsssss",$Username,$theme,$question1,$i,$reponseA,$reponseB,$reponseC,$reponseD,$reponse1);
                 mysqli_execute($question);
             }
         }

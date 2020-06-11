@@ -25,8 +25,9 @@
 
                     $Nom = $apartie->Nom;
                     $theme = $apartie->theme;
+                    $nombre_joueurs = $apartie->nombre_joueurs;
 
-                    echo "<input type=\"button\" value=\"entrer\" onclick=\"window.location.href='Room/$Nom/$theme'\">";
+                    echo "<input type=\"button\" value=\"entrer\" onclick=\"window.location.href='Room/$Nom/$theme/$nombre_joueurs'\">";
                     echo "</td>";
                     echo "</tr>";
 	            }
