@@ -21,13 +21,13 @@
                 $test3 = stripos($Username, $interdiction3);
 
 				if(($data['existe_pseudo'] != '0'))
-					echo "Erreur: Pseudo déjà utilisé !";
+					echo "<div class='error'> Pseudo déjà utilisé !</div>";
 				else if($confirmation != $mdp){
-					echo "Erreur: les deux mots de passes entrés sont différents !";
+					echo "<div class='error'> les deux mots de passes entrés sont différents !</div>";
 				}else if($confirmation == $Username){
-					echo "Erreur: le mot de passe ne peut pas être le même que le pseudo !";
+					echo "<div class='error'> le mot de passe ne peut pas être le même que le pseudo !</div>";
 				}else if($test1 == true || $test2 == true || $test3 == true)
-                    echo "Erreur : Votre Pseudo contient des caracteres interdits !";
+                    echo "<div class='error'>  Votre Pseudo contient des caracteres interdits !</div>";
 				else{
 					echo "ok";				
 				
