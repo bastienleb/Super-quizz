@@ -9,7 +9,7 @@
 			if(isset($parts[2])){
                 $theme = $parts[2];
                 
-                $resultat = mysqli_query($link,"SELECT * FROM Questions WHERE Theme= '$theme' "); 
+                $resultat = mysqli_query($link,"SELECT * FROM Questions WHERE Theme= '$theme'"); 
                 if($resultat) {
                     while($nom=mysqli_fetch_object($resultat)) {
                         /*echo "<b>".$nom->Theme;*/
