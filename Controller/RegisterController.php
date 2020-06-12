@@ -1,8 +1,9 @@
 <?php
-	class RegisterController {
-		public function Register() {
-			require(__DIR__.'/../View/new_compte.php');
-			VerifNew_compte::VerifRegister();
-		}
-	}
+   	class RegisterController {
+/* ------------------Redirection vers new compte------------------ */
+   		public function Register() {
+   			require(__DIR__.'/../View/new_compte.php');
+   			VerifNew_compte::VerifRegister();
+   		}
+   	}
 ?>
