@@ -13,6 +13,10 @@
             <option value="Math">Math</option>
             <option value="Francais">Francais</option>
             <option value="sneakers">Sneakers</option>
+            <option value="Musique">Musique</option>
+            <option value="Sport">Sport</option>
+            <option value="Cinema">Cinema</option>
+            <option value="Series">Series</option>
         </select>
     	<br/><br/>
 
