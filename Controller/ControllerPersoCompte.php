@@ -1,8 +1,9 @@
 <?php
-	class ControllerPersoCompte {
-		public function VerifCompte() {
-			require(__DIR__.'/../View/perso.php');
-			VerifModifCompte::VerifModif();
-		}
-	}
+   	class ControllerPersoCompte {
+/* ------------------Redirection vers perso------------------ */
+   		public function VerifCompte() {
+   			require(__DIR__.'/../View/perso.php');
+   			VerifModifCompte::VerifModif();
+   		}
+   	}
 ?>

@@ -1,7 +1,8 @@
 <?php
-	class LogoutController {
-		public function Logout() {
-			connection::LogOut();
-		}
-	}
+   	class LogoutController {
+/* ------------------ Redirection vers fermeture ------------------ */
+   		public function Logout() {
+   			connection::LogOut();
+   		}
+   	}
 ?>
