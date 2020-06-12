@@ -54,7 +54,7 @@
    				}
    			}
    		}	
-/* ------------------A COMMENTER ------------------ */
+/* ------------------Cherche et charge le fichier $class ------------------ */
    		public static function autoload($class) {
    			if(file_exists("$class.php"))
    				require_once("$class.php");
