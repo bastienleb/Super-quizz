@@ -2,7 +2,7 @@
     class Parties {
         public function AfficherParties() {
             $link = connection::Connect();
-
+/* ------------------ouverture de session------------------*/
             session_start();
             if(isset($_SESSION['Username']))
                 $Username = $_SESSION['Username'];
@@ -13,7 +13,7 @@
             } else {
                 header('Location: login');
             }
-            
+/* ------------------Recuperation de la BDd et affichage dans une table------------------ */
             $bpartie = mysqli_query($link, "SELECT * FROM  ListeTables");
             if($bpartie) {
                 while($apartie=mysqli_fetch_object($bpartie)) {
@@ -30,10 +30,10 @@
                     echo "<input type=\"button\" value=\"entrer\" onclick=\"window.location.href='Room/$Nom/$theme/$nombre_joueurs'\">";
                     echo "</td>";
                     echo "</tr>";
-	            }
+                }
                 echo "</table>";
             } else {
-            	die("<p>erreur dans la requete<p>");
+                die("<p>erreur dans la requete<p>");
             }
         }
     }

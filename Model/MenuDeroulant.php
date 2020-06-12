@@ -1,7 +1,6 @@
 <?php
     class MenuDeroulant {
-        //public $resultat;
-
+/* ------------------Recupere et Affiche dzns un select les themes existant------------------ */
         public function AfficherMenu() {
             $link = connection::Connect();
 
