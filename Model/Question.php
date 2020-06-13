@@ -31,6 +31,7 @@
                     "reponseB"=>$reponseB,
                     "reponseC"=>$reponseC,
                     "reponseD"=>$reponseD,
+                    "BonneReponse"=>$BonneReponse,
                 );
                 return $envoi;
             }
