@@ -31,7 +31,7 @@ button:active{
     display: inline-block;
     background-color: rgb(126, 204, 204);
     position: absolute;
-    top: 47.5%;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
@@ -53,7 +53,7 @@ button:active{
 
 .reponses{
     display: inline-block;
-    background-color: linear-gradient(to right, teal, mediumseagreen, teal);
+    background-color: linear-gradient(to right, teal, mediumseagreen, /*teal*/transparent);
     padding-left: 5em;
     padding-right: 5em;
     padding-top: 1em;
@@ -91,7 +91,7 @@ button:active{
 #myProgress { /*Placement de lma barre vide*/
     width: 90%;
     background-color: teal;
- 	text-align: center;
+     text-align: center;
     border-radius: 0.5em;
     position: relative;
     top: 90%;
@@ -118,7 +118,7 @@ button:active{
     padding-top: 0.75em;
     width: 17.5em;
     position: absolute;
-    top: 12.5%;
+    top: 7.5%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     border: solid;
@@ -130,7 +130,7 @@ button:active{
     display: inline-block;
     background-color: rgb(126, 204, 204);
     position: absolute;
-    top: 75%;
+    top: 64%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
