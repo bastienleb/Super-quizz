@@ -40,7 +40,7 @@
        				mysqli_query($link, $update);
        			}
        			$timestamp_15min = time() - (60 * 15);//nombre secondes
-   				$del = mysqli_query($link,"DELETE FROM Nombre_online WHERE timestamp<'".$timestamp_15min."'");
+   				 $del = mysqli_query($link,"DELETE FROM Nombre_online WHERE timestamp<'".$timestamp_15min."'");
     				
    				$nombre_co = mysqli_query($link,"SELECT COUNT(*) AS nombre_co FROM Nombre_online WHERE NomTable='".$nom."'");
 				$nombre_connecte = mysqli_fetch_array($nombre_co);
@@ -63,7 +63,6 @@
    				echo "La salle n'existe pas, redirection";
    				header('Location: ../../../main');
    			}
-        echo "<script type=\"text/javascript\" src=\"https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/JavaScript/Jeu.js\"></script>";
    		}
    	}
 ?>
