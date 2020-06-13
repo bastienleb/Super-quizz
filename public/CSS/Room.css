@@ -10,7 +10,6 @@ button{
     padding-right: 1.5em;
     cursor: pointer;
     height: 2em;
-    box-shadow: 4px 8px chartreuse;
     transition: 0.5s;
 }
 
@@ -71,7 +70,6 @@ button:active{
     border-radius: 0.75em;
     border: 2px solid;
     cursor: pointer;
-    box-shadow: 4px 8px chartreuse;
     transition: 0.5s;  /*            //////////////////////ANNIM MIDDLE*/
 }
 
@@ -99,7 +97,6 @@ button:active{
     transform: translateX(-50%) translateY(-50%);
     margin-top: 2em;
     border: solid;
-    box-shadow: 4px 8px chartreuse;
 }
 
 
@@ -136,4 +133,11 @@ button:active{
     padding-bottom:0.5em;
     border-radius: 0.75em;
     border: solid;
+}
+
+a{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
