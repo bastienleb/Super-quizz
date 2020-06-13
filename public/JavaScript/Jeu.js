@@ -1,6 +1,6 @@
 var i = 0;
 var xhr = new XMLHttpRequest();
-var reponses = document.getElementById(test);
+var reponses = document.getElementById('test');
 var question = document.getElementById('question');
 var repnse1 = document.getElementById('reponse1');
 var repnse2 = document.getElementById('reponse2');
@@ -14,10 +14,14 @@ var ContenuReponse2 = reponse2.textContent;
 var ContenuReponse3 = reponse3.textContent;
 var ContenuReponse4 = reponse4.textContent;
 var ContenuBonreponse = bonrepnse.textContent;
+id = 0;
 
+
+document.getElementById('reponses').style.display = 'none';
 
 
 function move() {
+document.getElementById('reponses').style.display = 'block';
   if (i == 0) {
     i = 1;
     var elem = document.getElementById("myBar");
@@ -83,6 +87,9 @@ function verfication(getId){
   if (test == ContenuBonreponse) {
     console.log("\n\nVictoire");
     alert("Victoire")
+  }
+  else if (id== '0'){
+    console.log("\n\nLe joueur n'a pas repondu" )
   }
 
   else{
