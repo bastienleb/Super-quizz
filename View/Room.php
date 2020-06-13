@@ -5,42 +5,25 @@
     <link rel="stylesheet" type="text/css" href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/CSS/Room.css">
 </head>
 <body>
-    <div class="all" id="test">
-        
-        <?php //require('../Model/Question.php'); ?>
-
-        <div id="myProgress">
-            <div id="myBar">0</div> 
-        </div>        
-        <br>
-
-        <button onclick="test()" id="button">Commencer</button>
+    <div class="all" id="test">        
+        <form>
+            <div class='question_class'>
+                <div class='question'><b><?php echo json_encode($questions['question']); ?></b>
+                </div><br/>
+            </div>
+            <div id='reponses' class='reponses'>
+                <div id='reponse1' class='reponse_1'><?php echo json_encode($questions['reponseA']); ?></div>
+                <div id='reponse1' class='reponse_2'><?php echo json_encode($questions['reponseB']); ?></div></br>
+                <div id='reponse1' class='reponse_3'><?php echo json_encode($questions['reponseC']); ?></div>
+                <div id='reponse1' class='reponse_4'><?php echo json_encode($questions['reponseD']); ?></div>;
+            </div>
+            <div id="myProgress">
+                <div id="myBar">0</div> 
+            </div>        
+            <br>
+            <button onclick="move(); return false;" id="button">Commencer</button>
+        </form>
+        <a href="../../../main">Retourner au main</a>
     </div>
-    <a href="../../../main">Retourner au main</a>
 </body>
-
-<script type="text/javascript">
-var i = 0;
-function move() {
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 0;
-    var id = setInterval(frame, 50 /*valeur a changer pour le temps*/);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        i = 0;
-        move();
-
-        /*location.replace("main");*/
-      } else {
-        width++;
-        elem.style.width = width + "%";
-        elem.innerHTML = width ;
-      }
-    }
-  }
-}
-</script>
 </html>

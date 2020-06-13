@@ -31,13 +31,15 @@
    				$retour = mysqli_query($link,'SELECT COUNT(*) AS nbre_entrees FROM Nombre_online WHERE ip=\''.$_SERVER['REMOTE_ADDR'].'\'');
    				$donnees = mysqli_fetch_array($retour);
 
+/*-----------------------------Récupération du nombre de connectés-------------*/
+
 					if ($donnees['nbre_entrees'] == 0){
        				$add = mysqli_query($link,"INSERT INTO Nombre_online VALUES ('".$Username."', '".$nom."', '".$_SERVER['REMOTE_ADDR']."', '".time()."')");
    				}else{
        				$update = "UPDATE Nombre_online SET timestamp='".time()."' WHERE ip='".$_SERVER['REMOTE_ADDR']."'";
        				mysqli_query($link, $update);
        			}
-       			$timestamp_15min = time() - 10/*(60 * 15)*/;//nombre secondes
+       			$timestamp_15min = time() - (60 * 15);//nombre secondes
    				$del = mysqli_query($link,"DELETE FROM Nombre_online WHERE timestamp<'".$timestamp_15min."'");
     				
    				$nombre_co = mysqli_query($link,"SELECT COUNT(*) AS nombre_co FROM Nombre_online WHERE NomTable='".$nom."'");
@@ -61,6 +63,7 @@
    				echo "La salle n'existe pas, redirection";
    				header('Location: ../../../main');
    			}
+        echo "<script type=\"text/javascript\" src=\"https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/JavaScript/Jeu.js\"></script>";
    		}
    	}
 ?>
