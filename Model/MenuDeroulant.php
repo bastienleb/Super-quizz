@@ -6,21 +6,18 @@
 
             $resultat = mysqli_query($link,"SELECT * FROM Themes ");
             if($resultat) {
-                while($nom=mysqli_fetch_object($resultat)) {
-                    /*echo "<script type='text/javascript'>
-                        var newOption = document.createElement('option');
-                        newOption.value = '<?php echo $nom->nom_theme; ?>'
-                        newOption.innerHTML = '<?php echo $nom->nom_theme; ?>'
-                        document.getElementById('selecte').appendChild(newOption);
-                    </script>"; */ 
-                    echo "<option>";
-                    echo $nom->nom_theme;
-                    echo "</option>";
+                $nb_theme = mysqli_query($link,"SELECT COUNT(*) AS nb_theme FROM Themes");
+                $nombreThemes = mysqli_fetch_array($nb_theme);
+                $i = 1;
+                while($i <= $nombreThemes){
+                    $nom=mysqli_fetch_object($resultat)
+                    $theme[$i] = $nom['nom_theme'];    
+                    $i++;
                 }
-                echo "</select>";
             } else {
                 die("<p>erreur dans la requete<p>");
-            } 
+            }
+            return $theme;
         }
     }
 ?>
