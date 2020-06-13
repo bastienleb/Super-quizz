@@ -5,13 +5,14 @@
     <link rel="stylesheet" type="text/css" href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/CSS/Room.css">
 </head>
 <body>
+    <div class='question_class'>
+        <h4> Question :</h4>
+        <div class='question'><b><?php echo ($questions['question']); ?></b>
+        </div><br/>
+    </div>
+
     <div class="all">      
         <form>
-            <div class='question_class'>
-            <h4> Question :</h4>
-                <div class='question'><b><?php echo ($questions['question']); ?></b>
-                </div><br/>
-            </div>
 
             <h4> Reponses :</h4>
             <div id='reponses' class='reponses'>
