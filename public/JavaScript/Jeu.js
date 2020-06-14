@@ -165,7 +165,3 @@ function update(score_fin){
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhr.send("score="+score_fin);
 };
-
-
-
-
