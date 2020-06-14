@@ -41,13 +41,13 @@
             <div class="theme"> <!--affichage theme-->
                 <select name="theme" class="selecteur">
                     <option value="selection" hidden="" selected="selected">Thèmes</option>
-                    <option value="Math">Math</option>
-                    <option value="Francais">Francais</option>
-                    <option value="sneakers">Sneakers</option>
-                    <option value="Musique">Musique</option>
-                    <option value="Sport">Sport</option>
-                    <option value="Cinema">Cinema</option>
-                    <option value="Series">Series</option>
+                    <?php 
+                        $i = 1;
+                        while($i <= $main["nombreLigne"]){
+                            echo "<option value=".$main["theme".$i].">".$main["theme".$i]."</option>";
+                            $i++;
+                        }
+                    ?>
                 </select>
             </div>
         </div>  
