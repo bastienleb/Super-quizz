@@ -31,8 +31,6 @@
     </form>
     </br></br>
     <a href="../../../main">Retourner au main</a>
-    <p id="carre" hidden> score = </p>
-    <p id="demo"></p>
     <script type="text/javascript" src="http://dwarves.iut-fbleau.fr/~leblet/WIM/PROJET/public/JavaScript/Jeu.js"></script>
 </body>
 </html>
