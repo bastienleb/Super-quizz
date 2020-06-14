@@ -71,7 +71,7 @@ input[type="button" i] {
 
 input[type="button" i]:hover {
     opacity: 0.5;
-    cursor: pointer;
+    cursor: pointer; 
 }
 /*---------------------------------------------------CLASS------------------------------------*/
 .buttonq, .buttonp {
@@ -228,7 +228,7 @@ input[type="button" i] {
 input[type="button" i]:hover {
     opacity: 0.5;
     cursor: pointer;
-}
+} 
 /*---------------------------------------------------CLASS------------------------------------*/
 .buttonq, .buttonp {
     width: 75%;
@@ -315,4 +315,32 @@ input[type="button" i]:hover {
     left: 25em;
     width: 6%;
     text-align: center;
+}
+
+.input_theme {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-80%);
+    border-radius:0.5em;
+    cursor: default;
+    width: 35%;
+    padding: 3px;
+    background-color: rgb(126, 204, 204);
+    color: white;
+    border: solid 2px white;
+}
+
+.bouton_theme {
+    position: absolute;
+    bottom: 10%;
+    left: 70%;
+    transform: translateX(-49%);
+    border-radius:0.5em;
+    cursor: default;
+    width: 25%;
+    padding: 3px;
+    background-color: rgb(126, 204, 204);
+    color: white;
+    border: solid 2px white;
 }

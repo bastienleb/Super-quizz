@@ -50,6 +50,10 @@
                     ?>
                 </select>
             </div>
+            <form method="POST">
+                <input type="text" class="input_theme" name="theme" placeholder="Créer un theme" required>
+                <button type="submit" class="bouton_theme" name="créer">Créer</button>
+            </form>
         </div>  
 	</body>
 </html>

@@ -6,6 +6,7 @@
    			$data = MenuDeroulant::AfficherMenu();
    			$this->render('main', ['main' => $data]);
    			Parties::AfficherParties();
+   			VerifTheme::VerifierTheme();
    		}
    	}
 ?>
