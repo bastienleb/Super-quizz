@@ -13,19 +13,6 @@ button{
     transition: 0.5s;
 }
 
-button:hover{
-    background-color:mediumseagreen;
-
-}
-
-button:active{
-
-    transform: translateY(4px);
-    box-shadow: 2px 4px forestgreen;
-    background-color: teal;
-    
-}
-
 .question_class{
     display: inline-block;
     background-color: rgb(126, 204, 204);
@@ -138,6 +125,13 @@ button:active{
 a{
     position: absolute;
     bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#demo{
+    position: absolute;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
