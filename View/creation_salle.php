@@ -21,13 +21,13 @@
 		<label>Choix du theme:</label>
 		<select name="nom_theme" class="selecteur" id='selecte'>
 			<option value="selection" hidden="">Selectionnez</option>
-			<option value="Math">Math</option>
-            <option value="Francais">Francais</option>
-            <option value="sneakers">Sneakers</option>
-            <option value="Musique">Musique</option>
-            <option value="Sport">Sport</option>
-            <option value="Cinema">Cinema</option>
-            <option value="Series">Series</option>
+			<?php 
+                $i = 1;
+                while($i <= $creation_salle["nombreLigne"]){
+                    echo "<option value=".$creation_salle["theme".$i].">".$creation_salle["theme".$i]."</option>";
+                    $i++;
+				}
+            ?>
         </select>
         <br/><br/><button type="submit" name="créer">Créer</button><br/><br/>
         <a href="main">Retourner à la page principale</a> 
