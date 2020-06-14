@@ -5,9 +5,8 @@
 	    <title>page principale </title>
 	    <link rel="stylesheet" href="https://dwarves.iut-fbleau.fr/~quintois/projet_wim/public/CSS/main.css">
     </head>
-    <body>
+    <body> 
     <ul>
-        <li><a class="nom" style="float:left">Connecté en tant que :<b> <?=$Username?></b></a></li>
         <li style="float:center" class="titre"><b><h3>SUPER QUIZZ</h3></b></li>
         <div class="dropdown">
             <button class="dropbtn">Paramètres</button>
