@@ -1,4 +1,9 @@
 var i = 0;
+var id = 0;
+var conv= 0;
+var score=0;
+
+
 var xhr = new XMLHttpRequest();
 var reponses = document.getElementById('test');
 var question = document.getElementById('question');
@@ -14,14 +19,11 @@ var ContenuReponse2 = reponse2.textContent;
 var ContenuReponse3 = reponse3.textContent;
 var ContenuReponse4 = reponse4.textContent;
 var ContenuBonreponse = bonrepnse.textContent;
-id = 0;
-conv= 0;
-score=0;
-
+/*------------------↑ Recup valeur et initialisation ↑------------------*/
 
 document.getElementById('reponses').style.display = 'none';
 document.getElementById('question').style.display = 'none';
-
+/*------------------- function de la bar -----------------*/
 function move() {
   document.getElementById('reponses').style.display = 'none';
   document.getElementById('question').style.display = 'none';
@@ -29,6 +31,8 @@ function move() {
   document.getElementById('question').style.display = 'inline-block';
   document.getElementById('button').style.display = 'none';
   ChangeColor();
+  Affichage_score();
+
   if (i == 0) {
     i = 1;
     var elem = document.getElementById("myBar");
@@ -41,6 +45,7 @@ function move() {
     console.log("reponse4 = "+ContenuReponse4);
     console.log("la bonne reponse est la : "+ContenuBonreponse);
     console.log("\nscore = "+score)
+    
 
     xhr.addEventListener('readystatechange', function() {
       if(this.readyState == 4 && this.status == 200) {
@@ -56,9 +61,10 @@ function move() {
       if (width >= 100) {
         clearInterval(time);
         i = 0;
+        Affichage_score();
         verfication();
         reload_tmp();
-       // reload();
+        //reload();
       } else {
         width++;
         elem.style.width = width + "%";
@@ -67,12 +73,12 @@ function move() {
     }
   }
 }
-
+/*------------------- function de recuperation de l'id -----------------*/
 function getId(monId){
   id=monId.id;
   ChangeColor();
 }
-
+/*------------------- function de verifaction -----------------*/
 function verfication(getId){
   if(id == "reponse1" ){
     console.log("\nle joueur clique sur  la reponse A ");
@@ -102,15 +108,17 @@ function verfication(getId){
   }
   else if (id== '0'){
     console.log("\n\nLe joueur n'a pas repondu");
+    console.log("\nscore = "+ score);
     alert("Il faut repondre");
   }
 
   else{
     console.log("\n\Perdu");
+    console.log("\nscore = "+ score);
     alert("Perdu");
   }
 }
-
+/*------------------- function pour changer la couleur au clique  -----------------*/
 function ChangeColor(getId){
   if(id == "reponse1" ){
     document.getElementById('reponse1').style.backgroundColor = 'chartreuse';
@@ -141,9 +149,20 @@ function ChangeColor(getId){
   }
 }
 
+/*------------------- function recharger page -----------------*/
 function reload_tmp(){
-  location.reload(); 
+  //window.location.replace('3'); 
+  rest = setInterval(location.reload, 1000);
 }
+
+/*------------------- function Affichage score -----------------*/
+function Affichage_score(){
+  var x = document.getElementById("carre").innerHTML;
+  document.getElementById("demo").innerHTML = x+score;
+  console.log("\nAffichage du score");
+  console.log("\nscore = "+ score);
+}
+
 /*
 function reload(){
   document.getElementById('question').style.display = 'none';
@@ -151,6 +170,7 @@ function reload(){
         console.log("ID avant le RAZ : "+id);
         id=0;
         console.log("\nID apres le RAZ : "+id);
-        $("body").load("http://dwarves.iut-fbleau.fr/~leblet/WIM/PROJET/View/Question.php");
+        $("body").load("../test.php");
         document.getElementById('button').style.display = 'inline-block';
-}*/
+}
+*/
