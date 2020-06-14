@@ -23,6 +23,7 @@
    				$nom = $parts[1];
    				$theme = $parts[2];
 				$nombre_joueurs = $parts[3];
+        $score = 0;
 				   
 /* ------------------Recuperation et modification de la BDD------------------ */
 				$search = mysqli_query($link,"SELECT COUNT(*) AS existe_salle FROM ListeTables WHERE Nom = '".$nom."' AND theme = '".$theme."'");
@@ -34,7 +35,7 @@
 /*-----------------------------Récupération du nombre de connectés-------------*/
 
 					if ($donnees['nbre_entrees'] == 0){
-       				$add = mysqli_query($link,"INSERT INTO Nombre_online VALUES ('".$Username."', '".$nom."', '".$_SERVER['REMOTE_ADDR']."', '".time()."')");
+       				$add = mysqli_query($link,"INSERT INTO Nombre_online VALUES ('".$Username."', '".$nom."', '".$_SERVER['REMOTE_ADDR']."', '".time()."','".$score."')");
    				}else{
        				$update = "UPDATE Nombre_online SET timestamp='".time()."' WHERE ip='".$_SERVER['REMOTE_ADDR']."'";
        				mysqli_query($link, $update);
