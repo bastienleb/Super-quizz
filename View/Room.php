@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -29,6 +31,8 @@
     </form>
     </br></br>
     <a href="../../../main">Retourner au main</a>
+    <p id="carre" hidden> score = </p>
+    <p id="demo"></p>
     <script type="text/javascript" src="http://dwarves.iut-fbleau.fr/~leblet/WIM/PROJET/public/JavaScript/Jeu.js"></script>
 </body>
 </html>
